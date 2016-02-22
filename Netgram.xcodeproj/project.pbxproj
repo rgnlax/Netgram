@@ -1,0 +1,443 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B53FE8141C79E01200835E43 /* NTMasterCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = B53FE8131C79E01200835E43 /* NTMasterCellView.m */; };
+		B53FE8171C79E43000835E43 /* NTMasterRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = B53FE8161C79E43000835E43 /* NTMasterRowView.m */; };
+		B53FE81B1C79E72500835E43 /* NSColor+GRProKitHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = B53FE81A1C79E72500835E43 /* NSColor+GRProKitHelpers.m */; };
+		B53FE81E1C79ECD500835E43 /* NTSplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = B53FE81D1C79ECD500835E43 /* NTSplitView.m */; };
+		B5A4BB241C78FF3000CE2DD1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A4BB1C1C78FF3000CE2DD1 /* AppDelegate.m */; };
+		B5A4BB251C78FF3000CE2DD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5A4BB1D1C78FF3000CE2DD1 /* Main.storyboard */; };
+		B5A4BB271C78FF3000CE2DD1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A4BB201C78FF3000CE2DD1 /* main.m */; };
+		B5A4BB281C78FF3000CE2DD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5A4BB231C78FF3000CE2DD1 /* Assets.xcassets */; };
+		B5A4BB391C79A30800CE2DD1 /* GRSeparatorLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A4BB321C79A30800CE2DD1 /* GRSeparatorLineView.m */; };
+		B5A4BB3A1C79A30800CE2DD1 /* GRVibrantTitlebarView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A4BB341C79A30800CE2DD1 /* GRVibrantTitlebarView.m */; };
+		B5A4BB3B1C79A30800CE2DD1 /* GRVibrantTitlebarWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A4BB361C79A30800CE2DD1 /* GRVibrantTitlebarWindow.m */; };
+		B5A4BB3C1C79A30800CE2DD1 /* GRVibrantTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A4BB381C79A30800CE2DD1 /* GRVibrantTitleView.m */; };
+		B5E585C41C7B6C5400CE018D /* NTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E585C01C7B6C5400CE018D /* NTDetailViewController.m */; };
+		B5E585C51C7B6C5400CE018D /* NTMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E585C21C7B6C5400CE018D /* NTMasterViewController.m */; };
+		B5E585CB1C7B711E00CE018D /* NTHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E585CA1C7B711E00CE018D /* NTHeaderView.m */; };
+		B5E585CE1C7B7A7800CE018D /* NTFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E585CD1C7B7A7800CE018D /* NTFooterView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B53FE8121C79E01200835E43 /* NTMasterCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NTMasterCellView.h; path = TableView/NTMasterCellView.h; sourceTree = "<group>"; };
+		B53FE8131C79E01200835E43 /* NTMasterCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NTMasterCellView.m; path = TableView/NTMasterCellView.m; sourceTree = "<group>"; };
+		B53FE8151C79E43000835E43 /* NTMasterRowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NTMasterRowView.h; path = TableView/NTMasterRowView.h; sourceTree = "<group>"; };
+		B53FE8161C79E43000835E43 /* NTMasterRowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NTMasterRowView.m; path = TableView/NTMasterRowView.m; sourceTree = "<group>"; };
+		B53FE8191C79E72500835E43 /* NSColor+GRProKitHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+GRProKitHelpers.h"; sourceTree = "<group>"; };
+		B53FE81A1C79E72500835E43 /* NSColor+GRProKitHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+GRProKitHelpers.m"; sourceTree = "<group>"; };
+		B53FE81C1C79ECD500835E43 /* NTSplitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTSplitView.h; sourceTree = "<group>"; };
+		B53FE81D1C79ECD500835E43 /* NTSplitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTSplitView.m; sourceTree = "<group>"; };
+		B5A4BB1B1C78FF3000CE2DD1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B5A4BB1C1C78FF3000CE2DD1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B5A4BB1E1C78FF3000CE2DD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B5A4BB1F1C78FF3000CE2DD1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5A4BB201C78FF3000CE2DD1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B5A4BB231C78FF3000CE2DD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B5A4BB311C79A30800CE2DD1 /* GRSeparatorLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRSeparatorLineView.h; sourceTree = "<group>"; };
+		B5A4BB321C79A30800CE2DD1 /* GRSeparatorLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRSeparatorLineView.m; sourceTree = "<group>"; };
+		B5A4BB331C79A30800CE2DD1 /* GRVibrantTitlebarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRVibrantTitlebarView.h; sourceTree = "<group>"; };
+		B5A4BB341C79A30800CE2DD1 /* GRVibrantTitlebarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRVibrantTitlebarView.m; sourceTree = "<group>"; };
+		B5A4BB351C79A30800CE2DD1 /* GRVibrantTitlebarWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRVibrantTitlebarWindow.h; sourceTree = "<group>"; };
+		B5A4BB361C79A30800CE2DD1 /* GRVibrantTitlebarWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRVibrantTitlebarWindow.m; sourceTree = "<group>"; };
+		B5A4BB371C79A30800CE2DD1 /* GRVibrantTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRVibrantTitleView.h; sourceTree = "<group>"; };
+		B5A4BB381C79A30800CE2DD1 /* GRVibrantTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRVibrantTitleView.m; sourceTree = "<group>"; };
+		B5C068E51C78ECFC0007E186 /* Netgram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Netgram.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5E585BF1C7B6C5400CE018D /* NTDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTDetailViewController.h; sourceTree = "<group>"; };
+		B5E585C01C7B6C5400CE018D /* NTDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTDetailViewController.m; sourceTree = "<group>"; };
+		B5E585C11C7B6C5400CE018D /* NTMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTMasterViewController.h; sourceTree = "<group>"; };
+		B5E585C21C7B6C5400CE018D /* NTMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTMasterViewController.m; sourceTree = "<group>"; };
+		B5E585C91C7B711E00CE018D /* NTHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTHeaderView.h; sourceTree = "<group>"; };
+		B5E585CA1C7B711E00CE018D /* NTHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTHeaderView.m; sourceTree = "<group>"; };
+		B5E585CC1C7B7A7800CE018D /* NTFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTFooterView.h; sourceTree = "<group>"; };
+		B5E585CD1C7B7A7800CE018D /* NTFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTFooterView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B5C068E21C78ECFC0007E186 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B53FE8111C79DFEB00835E43 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				B53FE8121C79E01200835E43 /* NTMasterCellView.h */,
+				B53FE8131C79E01200835E43 /* NTMasterCellView.m */,
+				B53FE8151C79E43000835E43 /* NTMasterRowView.h */,
+				B53FE8161C79E43000835E43 /* NTMasterRowView.m */,
+			);
+			name = TableView;
+			sourceTree = "<group>";
+		};
+		B53FE8181C79E72500835E43 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B53FE8191C79E72500835E43 /* NSColor+GRProKitHelpers.h */,
+				B53FE81A1C79E72500835E43 /* NSColor+GRProKitHelpers.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B5A4BB1A1C78FF3000CE2DD1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B53FE8181C79E72500835E43 /* Extensions */,
+				B5A4BB1B1C78FF3000CE2DD1 /* AppDelegate.h */,
+				B5A4BB1C1C78FF3000CE2DD1 /* AppDelegate.m */,
+				B5A4BB1F1C78FF3000CE2DD1 /* Info.plist */,
+				B5A4BB201C78FF3000CE2DD1 /* main.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B5A4BB211C78FF3000CE2DD1 /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				B5A4BB291C78FF7800CE2DD1 /* Controller */,
+				B5A4BB2A1C78FF7800CE2DD1 /* View */,
+				B5A4BB2B1C78FF7800CE2DD1 /* Model */,
+			);
+			path = MVC;
+			sourceTree = "<group>";
+		};
+		B5A4BB221C78FF3000CE2DD1 /* COM */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = COM;
+			sourceTree = "<group>";
+		};
+		B5A4BB291C78FF7800CE2DD1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B5E585BE1C7B6C5400CE018D /* Main Controllers */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B5A4BB2A1C78FF7800CE2DD1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B53FE8111C79DFEB00835E43 /* TableView */,
+				B53FE81C1C79ECD500835E43 /* NTSplitView.h */,
+				B53FE81D1C79ECD500835E43 /* NTSplitView.m */,
+				B5E585C91C7B711E00CE018D /* NTHeaderView.h */,
+				B5E585CA1C7B711E00CE018D /* NTHeaderView.m */,
+				B5E585CC1C7B7A7800CE018D /* NTFooterView.h */,
+				B5E585CD1C7B7A7800CE018D /* NTFooterView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B5A4BB2B1C78FF7800CE2DD1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B5A4BB2F1C79A2D600CE2DD1 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				B5A4BB301C79A30800CE2DD1 /* GRVibrantTitlebarWindow */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		B5A4BB301C79A30800CE2DD1 /* GRVibrantTitlebarWindow */ = {
+			isa = PBXGroup;
+			children = (
+				B5A4BB311C79A30800CE2DD1 /* GRSeparatorLineView.h */,
+				B5A4BB321C79A30800CE2DD1 /* GRSeparatorLineView.m */,
+				B5A4BB331C79A30800CE2DD1 /* GRVibrantTitlebarView.h */,
+				B5A4BB341C79A30800CE2DD1 /* GRVibrantTitlebarView.m */,
+				B5A4BB351C79A30800CE2DD1 /* GRVibrantTitlebarWindow.h */,
+				B5A4BB361C79A30800CE2DD1 /* GRVibrantTitlebarWindow.m */,
+				B5A4BB371C79A30800CE2DD1 /* GRVibrantTitleView.h */,
+				B5A4BB381C79A30800CE2DD1 /* GRVibrantTitleView.m */,
+			);
+			path = GRVibrantTitlebarWindow;
+			sourceTree = "<group>";
+		};
+		B5C068DC1C78ECFC0007E186 = {
+			isa = PBXGroup;
+			children = (
+				B5C068E71C78ECFC0007E186 /* Netgram */,
+				B5C068E61C78ECFC0007E186 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B5C068E61C78ECFC0007E186 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5C068E51C78ECFC0007E186 /* Netgram.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B5C068E71C78ECFC0007E186 /* Netgram */ = {
+			isa = PBXGroup;
+			children = (
+				B5A4BB2F1C79A2D600CE2DD1 /* Libraries */,
+				B5A4BB1A1C78FF3000CE2DD1 /* Supporting Files */,
+				B5A4BB211C78FF3000CE2DD1 /* MVC */,
+				B5A4BB221C78FF3000CE2DD1 /* COM */,
+				B5A4BB231C78FF3000CE2DD1 /* Assets.xcassets */,
+				B5A4BB1D1C78FF3000CE2DD1 /* Main.storyboard */,
+			);
+			path = Netgram;
+			sourceTree = "<group>";
+		};
+		B5E585BE1C7B6C5400CE018D /* Main Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B5E585BF1C7B6C5400CE018D /* NTDetailViewController.h */,
+				B5E585C01C7B6C5400CE018D /* NTDetailViewController.m */,
+				B5E585C11C7B6C5400CE018D /* NTMasterViewController.h */,
+				B5E585C21C7B6C5400CE018D /* NTMasterViewController.m */,
+			);
+			path = "Main Controllers";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B5C068E41C78ECFC0007E186 /* Netgram */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5C068F91C78ECFC0007E186 /* Build configuration list for PBXNativeTarget "Netgram" */;
+			buildPhases = (
+				B5C068E11C78ECFC0007E186 /* Sources */,
+				B5C068E21C78ECFC0007E186 /* Frameworks */,
+				B5C068E31C78ECFC0007E186 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Netgram;
+			productName = Netgram;
+			productReference = B5C068E51C78ECFC0007E186 /* Netgram.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B5C068DD1C78ECFC0007E186 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = NT;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = MP;
+				TargetAttributes = {
+					B5C068E41C78ECFC0007E186 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = B5C068E01C78ECFC0007E186 /* Build configuration list for PBXProject "Netgram" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B5C068DC1C78ECFC0007E186;
+			productRefGroup = B5C068E61C78ECFC0007E186 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B5C068E41C78ECFC0007E186 /* Netgram */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B5C068E31C78ECFC0007E186 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5A4BB251C78FF3000CE2DD1 /* Main.storyboard in Resources */,
+				B5A4BB281C78FF3000CE2DD1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B5C068E11C78ECFC0007E186 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B53FE81E1C79ECD500835E43 /* NTSplitView.m in Sources */,
+				B5A4BB3A1C79A30800CE2DD1 /* GRVibrantTitlebarView.m in Sources */,
+				B5E585C41C7B6C5400CE018D /* NTDetailViewController.m in Sources */,
+				B5A4BB3C1C79A30800CE2DD1 /* GRVibrantTitleView.m in Sources */,
+				B5E585C51C7B6C5400CE018D /* NTMasterViewController.m in Sources */,
+				B5A4BB271C78FF3000CE2DD1 /* main.m in Sources */,
+				B5A4BB3B1C79A30800CE2DD1 /* GRVibrantTitlebarWindow.m in Sources */,
+				B5A4BB391C79A30800CE2DD1 /* GRSeparatorLineView.m in Sources */,
+				B5E585CB1C7B711E00CE018D /* NTHeaderView.m in Sources */,
+				B5E585CE1C7B7A7800CE018D /* NTFooterView.m in Sources */,
+				B53FE8171C79E43000835E43 /* NTMasterRowView.m in Sources */,
+				B53FE81B1C79E72500835E43 /* NSColor+GRProKitHelpers.m in Sources */,
+				B5A4BB241C78FF3000CE2DD1 /* AppDelegate.m in Sources */,
+				B53FE8141C79E01200835E43 /* NTMasterCellView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B5A4BB1D1C78FF3000CE2DD1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5A4BB1E1C78FF3000CE2DD1 /* Base */,
+			);
+			name = Main.storyboard;
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B5C068F71C78ECFC0007E186 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B5C068F81C78ECFC0007E186 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B5C068FA1C78ECFC0007E186 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Netgram/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mp.Netgram;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B5C068FB1C78ECFC0007E186 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Netgram/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mp.Netgram;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B5C068E01C78ECFC0007E186 /* Build configuration list for PBXProject "Netgram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5C068F71C78ECFC0007E186 /* Debug */,
+				B5C068F81C78ECFC0007E186 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5C068F91C78ECFC0007E186 /* Build configuration list for PBXNativeTarget "Netgram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5C068FA1C78ECFC0007E186 /* Debug */,
+				B5C068FB1C78ECFC0007E186 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B5C068DD1C78ECFC0007E186 /* Project object */;
+}
