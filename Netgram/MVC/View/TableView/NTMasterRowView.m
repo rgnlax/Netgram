@@ -13,6 +13,8 @@
 
 @implementation NTMasterRowView
 
+#pragma mark - Drawing
+
 - (void)drawSelectionInRect:(NSRect)dirtyRect {
     if (self.selectionHighlightStyle != NSTableViewSelectionHighlightStyleNone) {
         NSColor *selectionColor = [NSColor colorWithCalibratedRed: 0.267 green: 0.467 blue: 0.698 alpha: 1];
@@ -26,6 +28,7 @@
         [selectionPath stroke];
     }
 }
+
 - (void)drawSeparatorInRect:(NSRect)dirtyRect {
     if (!self.isSelected) {
         // Default separator color
@@ -40,6 +43,8 @@
         // Draw separator line
         NSRectFill (drawingRect);
     }
+    
 }
+
 
 @end

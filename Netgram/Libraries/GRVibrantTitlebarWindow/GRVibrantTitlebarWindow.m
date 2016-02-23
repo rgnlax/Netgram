@@ -11,6 +11,8 @@
 #import "GRVibrantTitlebarView.h"
 #import "GRVibrantTitleView.h"
 
+#define TITLE_BAR_HEIGHT 22
+
 @interface GRVibrantTitlebarWindow ()
 
 @property (nonatomic, assign) NSWindowTitleVisibility internalTitleVisibility;
@@ -38,7 +40,7 @@
     
     // defaults
     self.titleVisibility = NSWindowTitleVisible;
-    self.titlebarAppearance = [NSAppearance appearanceNamed:NSAppearanceNameVibrantDark];
+    self.titlebarAppearance = [NSAppearance appearanceNamed:NSAppearanceNameVibrantLight];
     self.hidesTitlebarWhenFullscreen = NO;
 }
 
@@ -47,7 +49,7 @@
     if (self.titlebarView) return;
     
     // create a vibrant titlebar view and put it in the window
-    self.titlebarView = [[GRVibrantTitlebarView alloc] initWithFrame:NSMakeRect(0, NSHeight(self.frame)-25, NSWidth(self.frame), 25)];
+    self.titlebarView = [[GRVibrantTitlebarView alloc] initWithFrame:NSMakeRect(0, NSHeight(self.frame)-TITLE_BAR_HEIGHT, NSWidth(self.frame), TITLE_BAR_HEIGHT)];
     self.titlebarView.autoresizingMask = NSViewMinYMargin|NSViewWidthSizable;
     //self.titlebarView.blendingMode = NSVisualEffectBlendingModeWithinWindow;
     

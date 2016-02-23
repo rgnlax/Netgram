@@ -13,8 +13,7 @@
 - (void)setBackgroundStyle:(NSBackgroundStyle)backgroundStyle {
     [super setBackgroundStyle:backgroundStyle];
     
-    self.titleField.textColor = (backgroundStyle == NSBackgroundStyleLight ? [NSColor darkGrayColor] :[NSColor whiteColor]);
-    self.detailsField.textColor = (backgroundStyle == NSBackgroundStyleLight ? [NSColor lightGrayColor] :[NSColor whiteColor]);
+    [self repaintWithStyle:backgroundStyle];
 }
 
 - (void)awakeFromNib {
@@ -28,5 +27,14 @@
     self.iconImageView.layer.masksToBounds = YES;
 }
 
+- (void)repaintWithStyle:(NSBackgroundStyle)backgroundStyle {
+    if (backgroundStyle == NSBackgroundStyleLight) {
+        self.titleField.textColor = [NSColor darkGrayColor];
+        self.detailsField.textColor = [NSColor lightGrayColor];
+    } else {
+        self.titleField.textColor = [NSColor whiteColor];
+        self.detailsField.textColor = [NSColor whiteColor];
+    }
+}
 
 @end

@@ -11,6 +11,8 @@
 		B53FE8171C79E43000835E43 /* NTMasterRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = B53FE8161C79E43000835E43 /* NTMasterRowView.m */; };
 		B53FE81B1C79E72500835E43 /* NSColor+GRProKitHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = B53FE81A1C79E72500835E43 /* NSColor+GRProKitHelpers.m */; };
 		B53FE81E1C79ECD500835E43 /* NTSplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = B53FE81D1C79ECD500835E43 /* NTSplitView.m */; };
+		B543BB041C7CE7E90078454E /* NTTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B543BB031C7CE7E90078454E /* NTTextField.m */; };
+		B543BB071C7CF03F0078454E /* NTTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B543BB061C7CF03F0078454E /* NTTextFieldCell.m */; };
 		B5A4BB241C78FF3000CE2DD1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A4BB1C1C78FF3000CE2DD1 /* AppDelegate.m */; };
 		B5A4BB251C78FF3000CE2DD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5A4BB1D1C78FF3000CE2DD1 /* Main.storyboard */; };
 		B5A4BB271C78FF3000CE2DD1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A4BB201C78FF3000CE2DD1 /* main.m */; };
@@ -34,6 +36,10 @@
 		B53FE81A1C79E72500835E43 /* NSColor+GRProKitHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+GRProKitHelpers.m"; sourceTree = "<group>"; };
 		B53FE81C1C79ECD500835E43 /* NTSplitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTSplitView.h; sourceTree = "<group>"; };
 		B53FE81D1C79ECD500835E43 /* NTSplitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTSplitView.m; sourceTree = "<group>"; };
+		B543BB021C7CE7E90078454E /* NTTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTTextField.h; sourceTree = "<group>"; };
+		B543BB031C7CE7E90078454E /* NTTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTTextField.m; sourceTree = "<group>"; };
+		B543BB051C7CF03F0078454E /* NTTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTTextFieldCell.h; sourceTree = "<group>"; };
+		B543BB061C7CF03F0078454E /* NTTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTTextFieldCell.m; sourceTree = "<group>"; };
 		B5A4BB1B1C78FF3000CE2DD1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B5A4BB1C1C78FF3000CE2DD1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B5A4BB1E1C78FF3000CE2DD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -90,9 +96,17 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		B55C58C41C7BBC790008682F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		B5A4BB1A1C78FF3000CE2DD1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B55C58C41C7BBC790008682F /* Managers */,
 				B53FE8181C79E72500835E43 /* Extensions */,
 				B5A4BB1B1C78FF3000CE2DD1 /* AppDelegate.h */,
 				B5A4BB1C1C78FF3000CE2DD1 /* AppDelegate.m */,
@@ -137,6 +151,10 @@
 				B5E585CA1C7B711E00CE018D /* NTHeaderView.m */,
 				B5E585CC1C7B7A7800CE018D /* NTFooterView.h */,
 				B5E585CD1C7B7A7800CE018D /* NTFooterView.m */,
+				B543BB021C7CE7E90078454E /* NTTextField.h */,
+				B543BB031C7CE7E90078454E /* NTTextField.m */,
+				B543BB051C7CF03F0078454E /* NTTextFieldCell.h */,
+				B543BB061C7CF03F0078454E /* NTTextFieldCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -288,6 +306,8 @@
 				B5E585C51C7B6C5400CE018D /* NTMasterViewController.m in Sources */,
 				B5A4BB271C78FF3000CE2DD1 /* main.m in Sources */,
 				B5A4BB3B1C79A30800CE2DD1 /* GRVibrantTitlebarWindow.m in Sources */,
+				B543BB071C7CF03F0078454E /* NTTextFieldCell.m in Sources */,
+				B543BB041C7CE7E90078454E /* NTTextField.m in Sources */,
 				B5A4BB391C79A30800CE2DD1 /* GRSeparatorLineView.m in Sources */,
 				B5E585CB1C7B711E00CE018D /* NTHeaderView.m in Sources */,
 				B5E585CE1C7B7A7800CE018D /* NTFooterView.m in Sources */,

@@ -11,7 +11,7 @@
 @implementation NTSplitView
 
 - (CGFloat)dividerThickness {
-    return 0;
+    return 1;
 }
 
 @end
