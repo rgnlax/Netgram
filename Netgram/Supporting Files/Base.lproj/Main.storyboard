@@ -1049,10 +1049,10 @@
                                                         </buttonCell>
                                                     </button>
                                                     <textField focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="SC7-jq-sTX" customClass="NTTextField">
-                                                        <rect key="frame" x="16" y="8" width="513" height="33"/>
+                                                        <rect key="frame" x="16" y="10" width="513" height="29"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="DG6-Ws-fSm"/>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="33" id="Fxk-ly-b2m"/>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="29" id="Fxk-ly-b2m"/>
                                                         </constraints>
                                                         <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" focusRingType="none" placeholderString="Message..." drawsBackground="YES" id="b6c-hP-Sxy" customClass="NTTextFieldCell">
                                                             <font key="font" metaFont="system"/>
@@ -1065,12 +1065,12 @@
                                                     </textField>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="SC7-jq-sTX" secondAttribute="bottom" constant="8" id="Ghq-f7-xmH"/>
+                                                    <constraint firstAttribute="bottom" secondItem="SC7-jq-sTX" secondAttribute="bottom" constant="10" id="Ghq-f7-xmH"/>
                                                     <constraint firstItem="7Y7-jp-Nog" firstAttribute="centerY" secondItem="tEu-6x-pvm" secondAttribute="centerY" id="J4y-Mq-KtR"/>
                                                     <constraint firstItem="SC7-jq-sTX" firstAttribute="leading" secondItem="tEu-6x-pvm" secondAttribute="leading" constant="16" id="NDY-pe-bCR"/>
                                                     <constraint firstAttribute="trailing" secondItem="7Y7-jp-Nog" secondAttribute="trailing" constant="20" id="Ohk-xO-eD4"/>
                                                     <constraint firstItem="7Y7-jp-Nog" firstAttribute="leading" secondItem="SC7-jq-sTX" secondAttribute="trailing" constant="16" id="cQH-Ks-i4e"/>
-                                                    <constraint firstItem="SC7-jq-sTX" firstAttribute="top" secondItem="tEu-6x-pvm" secondAttribute="top" constant="8" id="mZq-GV-Vcw"/>
+                                                    <constraint firstItem="SC7-jq-sTX" firstAttribute="top" secondItem="tEu-6x-pvm" secondAttribute="top" constant="10" id="mZq-GV-Vcw"/>
                                                 </constraints>
                                             </visualEffectView>
                                         </subviews>

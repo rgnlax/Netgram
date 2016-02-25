@@ -17,7 +17,13 @@
 
 - (void)drawSelectionInRect:(NSRect)dirtyRect {
     if (self.selectionHighlightStyle != NSTableViewSelectionHighlightStyleNone) {
-        NSColor *selectionColor = [NSColor colorWithCalibratedRed: 0.267 green: 0.467 blue: 0.698 alpha: 1];
+        NSColor *selectionColor;
+        
+        if (![self shoudDrawAsKey]) {
+            selectionColor = [[NSColor lightGrayColor]lighterColor];
+        } else {
+            selectionColor = [NSColor colorWithCalibratedRed: 0.267 green: 0.467 blue: 0.698 alpha: 1];
+        }
         
         [selectionColor setFill];
         [[selectionColor darkerColor]setStroke];
@@ -43,8 +49,10 @@
         // Draw separator line
         NSRectFill (drawingRect);
     }
-    
 }
 
+- (BOOL)shoudDrawAsKey {
+    return (NSApp.active && _window.isKeyWindow && [_window.firstResponder isEqualTo:self.superview]);
+}
 
 @end

@@ -68,17 +68,27 @@
 }
 
 #pragma mark - Appearance
+
 - (void)awakeFromNib {
     [super awakeFromNib];
-    
-    self.bezeled = false;
     
     [self setWantsLayer:true];
     
     self.layer.masksToBounds = true;
+    self.layer.backgroundColor = [NSColor whiteColor].CGColor;
     self.layer.cornerRadius = CORNER_RADIUS;
     self.layer.borderColor = [NSColor colorWithCalibratedWhite:0.86 alpha:1.0].CGColor;
     self.layer.borderWidth = 1.0;
+}
+
+- (BOOL)becomeFirstResponder {
+    BOOL success = [super becomeFirstResponder];
+    if(success) {
+        NSTextView* textField = (NSTextView*) [self currentEditor];
+        if( [textField respondsToSelector: @selector(setInsertionPointColor:)] )
+            [textField setInsertionPointColor: [NSColor colorWithCalibratedRed: 0.267 green: 0.467 blue: 0.698 alpha: 1]];
+    }
+    return success;
 }
 
 @end
