@@ -8,6 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface NTMasterRowView : NSTableRowView
+@interface NTMasterTableRowView : NSTableRowView
 
 @end

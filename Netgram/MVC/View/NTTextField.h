@@ -10,4 +10,6 @@
 
 @interface NTTextField : NSTextField
 
+- (void)clear;
+
 @end

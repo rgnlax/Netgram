@@ -6,9 +6,9 @@
 //  Copyright © 2016 MP. All rights reserved.
 //
 
-#import "NTMasterCellView.h"
+#import "NTMasterTableCellView.h"
 
-@implementation NTMasterCellView
+@implementation NTMasterTableCellView
 
 - (void)setBackgroundStyle:(NSBackgroundStyle)backgroundStyle {
     [super setBackgroundStyle:backgroundStyle];

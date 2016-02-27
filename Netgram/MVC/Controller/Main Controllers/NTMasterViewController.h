@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "NTMasterCellView.h"
+#import "NTMasterTableCellView.h"
 
 @interface NTMasterViewController : NSViewController<NSTableViewDelegate, NSTableViewDataSource>
 

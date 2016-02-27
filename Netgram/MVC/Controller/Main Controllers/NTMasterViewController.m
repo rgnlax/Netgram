@@ -19,8 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.dataSource = @[@"Broadcast", @"COM #1", @"COM #2"];
-    
+    self.dataSource = @[@"Broadcast", @"COM #1", @"COM #2"];    
 }
 
 #pragma mark - NSTableView
@@ -33,7 +32,7 @@
 }
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
-    NTMasterCellView *cell = (NTMasterCellView *)[tableView makeViewWithIdentifier:@"MasterCell" owner:tableView];
+    NTMasterTableCellView *cell = (NTMasterTableCellView *)[tableView makeViewWithIdentifier:@"MasterCell" owner:tableView];
     
     [cell.titleField setStringValue:self.dataSource[row]];
     [cell.iconTextField setStringValue:[NSString stringWithFormat:@"#%lu", row + 1]];

@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface NTMasterCellView : NSTableCellView
+@interface NTMasterTableCellView : NSTableCellView
 
 @property (weak) IBOutlet NSTextField *titleField;
 @property (weak) IBOutlet NSTextField *detailsField;

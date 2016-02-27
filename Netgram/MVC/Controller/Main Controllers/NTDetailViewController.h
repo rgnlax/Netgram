@@ -8,6 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface NTDetailViewController : NSViewController
+@interface NTDetailViewController : NSViewController<NSTableViewDataSource, NSTableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet NSTableView *tableView;
 
 @end

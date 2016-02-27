@@ -8,9 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface NTTextFieldCell : NSTextFieldCell {
-    BOOL mIsEditingOrSelecting;
-
-}
+@interface NTTextFieldCell : NSTextFieldCell 
 
 @end

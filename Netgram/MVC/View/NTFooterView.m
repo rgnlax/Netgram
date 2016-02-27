@@ -23,7 +23,13 @@
     [line lineToPoint:NSMakePoint(NSWidth(aRect), NSHeight(aRect))];
     
     [line setLineWidth:2.0];
-    [[NSColor colorWithCalibratedWhite:0.9 alpha:1.0] set];
+    [[NSColor colorWithCalibratedWhite:0.85 alpha:1.0] set];
     [line stroke];
+}
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
+    [self setWantsLayer:true];
 }
 @end

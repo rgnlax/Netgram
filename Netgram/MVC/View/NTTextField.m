@@ -91,4 +91,10 @@
     return success;
 }
 
+- (void)clear {
+    self.stringValue = @"";
+    [self layoutSubtreeIfNeeded];
+    //[self invalidateIntrinsicContentSize];
+}
+
 @end

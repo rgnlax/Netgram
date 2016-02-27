@@ -6,12 +6,12 @@
 //  Copyright © 2016 MP. All rights reserved.
 //
 
-#import "NTMasterRowView.h"
+#import "NTMasterTableRowView.h"
 #import "NSColor+GRProKitHelpers.h"
 
 #define LEADING_OFFSET 65
 
-@implementation NTMasterRowView
+@implementation NTMasterTableRowView
 
 #pragma mark - Drawing
 
