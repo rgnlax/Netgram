@@ -15,6 +15,6 @@
 @property (weak) IBOutlet NSTextField *messageField;
 @property (weak) IBOutlet NSTextField *iconTextField;
 
-- (CGFloat)makeHeight;
+- (CGFloat)estimateHeight;
 
 @end

@@ -648,10 +648,10 @@
             </objects>
             <point key="canvasLocation" x="-173.5" y="-18"/>
         </scene>
-        <!--Split View Controller-->
+        <!--Split Controller-->
         <scene sceneID="jbv-Jn-v2V">
             <objects>
-                <splitViewController id="FwM-HA-OUQ" sceneMemberID="viewController">
+                <splitViewController id="FwM-HA-OUQ" customClass="NTSplitController" sceneMemberID="viewController">
                     <splitViewItems>
                         <splitViewItem id="Fo8-vc-0Dw"/>
                         <splitViewItem id="Elz-Ss-Abw"/>
@@ -1079,7 +1079,7 @@
                                             <rect key="frame" x="-100" y="-100" width="600" height="16"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
-                                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="pjr-pM-DmD">
+                                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="0.5" horizontal="NO" id="pjr-pM-DmD">
                                             <rect key="frame" x="-100" y="-100" width="15" height="102"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>

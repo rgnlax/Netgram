@@ -15,6 +15,7 @@
 		B5436D2E1C7F49C5004B716C /* NTMessageTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5436D2D1C7F49C5004B716C /* NTMessageTableCellView.m */; };
 		B543BB041C7CE7E90078454E /* NTTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B543BB031C7CE7E90078454E /* NTTextField.m */; };
 		B543BB071C7CF03F0078454E /* NTTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B543BB061C7CF03F0078454E /* NTTextFieldCell.m */; };
+		B593543C1C82561F007892CA /* NTSplitController.m in Sources */ = {isa = PBXBuildFile; fileRef = B593543A1C82561F007892CA /* NTSplitController.m */; };
 		B5A4BB241C78FF3000CE2DD1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A4BB1C1C78FF3000CE2DD1 /* AppDelegate.m */; };
 		B5A4BB251C78FF3000CE2DD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5A4BB1D1C78FF3000CE2DD1 /* Main.storyboard */; };
 		B5A4BB271C78FF3000CE2DD1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A4BB201C78FF3000CE2DD1 /* main.m */; };
@@ -46,6 +47,8 @@
 		B543BB031C7CE7E90078454E /* NTTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTTextField.m; sourceTree = "<group>"; };
 		B543BB051C7CF03F0078454E /* NTTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTTextFieldCell.h; sourceTree = "<group>"; };
 		B543BB061C7CF03F0078454E /* NTTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTTextFieldCell.m; sourceTree = "<group>"; };
+		B593543A1C82561F007892CA /* NTSplitController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTSplitController.m; sourceTree = "<group>"; };
+		B593543B1C82561F007892CA /* NTSplitController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTSplitController.h; sourceTree = "<group>"; };
 		B5A4BB1B1C78FF3000CE2DD1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B5A4BB1C1C78FF3000CE2DD1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B5A4BB1E1C78FF3000CE2DD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -113,6 +116,15 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		B59353BB1C82556E007892CA /* Help Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B593543A1C82561F007892CA /* NTSplitController.m */,
+				B593543B1C82561F007892CA /* NTSplitController.h */,
+			);
+			path = "Help Controllers";
+			sourceTree = "<group>";
+		};
 		B5A4BB1A1C78FF3000CE2DD1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +158,7 @@
 		B5A4BB291C78FF7800CE2DD1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B59353BB1C82556E007892CA /* Help Controllers */,
 				B5E585BE1C7B6C5400CE018D /* Main Controllers */,
 			);
 			path = Controller;
@@ -309,6 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B593543C1C82561F007892CA /* NTSplitController.m in Sources */,
 				B53FE81E1C79ECD500835E43 /* NTSplitView.m in Sources */,
 				B5A4BB3A1C79A30800CE2DD1 /* GRVibrantTitlebarView.m in Sources */,
 				B5E585C41C7B6C5400CE018D /* NTDetailViewController.m in Sources */,

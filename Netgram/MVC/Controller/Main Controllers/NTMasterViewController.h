@@ -7,10 +7,14 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "NTMasterTableCellView.h"
+#import "NTSplitController.h"
 
 @interface NTMasterViewController : NSViewController<NSTableViewDelegate, NSTableViewDataSource>
 
 @property (weak) IBOutlet NSTableView *tableView;
+@property (nonatomic) id<NTSplitTableViewControllerDelegate> splitDelegate;
+
+- (void)loadConversationAtIndex:(NSInteger)index;
+- (void)loadConversations;
 
 @end

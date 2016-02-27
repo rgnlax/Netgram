@@ -8,7 +8,7 @@
 
 #import "NTTextFieldCell.h"
 
-#define INITIAL_HEIGHT 30.0
+#define INITIAL_HEIGHT 29.0
 
 @implementation NTTextFieldCell
 

@@ -21,7 +21,7 @@
     self.iconImageView.layer.masksToBounds = YES;
 }
 
-- (CGFloat)makeHeight {
+- (CGFloat)estimateHeight {
     
     CGRect textSize = [self.messageField.attributedStringValue
                    boundingRectWithSize:CGSizeMake(NSWidth(_messageField.bounds), CGFLOAT_MAX)
