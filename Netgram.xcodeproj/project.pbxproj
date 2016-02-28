@@ -28,6 +28,9 @@
 		B5E585C51C7B6C5400CE018D /* NTMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E585C21C7B6C5400CE018D /* NTMasterViewController.m */; };
 		B5E585CB1C7B711E00CE018D /* NTHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E585CA1C7B711E00CE018D /* NTHeaderView.m */; };
 		B5E585CE1C7B7A7800CE018D /* NTFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E585CD1C7B7A7800CE018D /* NTFooterView.m */; };
+		B5E6E0E61C83951B000802A9 /* NTConversation.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E6E0E51C83951B000802A9 /* NTConversation.m */; };
+		B5E6E0E91C839531000802A9 /* NTMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E6E0E81C839531000802A9 /* NTMessage.m */; };
+		B5E6E0EC1C839597000802A9 /* NTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E6E0EB1C839597000802A9 /* NTUser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +75,12 @@
 		B5E585CA1C7B711E00CE018D /* NTHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTHeaderView.m; sourceTree = "<group>"; };
 		B5E585CC1C7B7A7800CE018D /* NTFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTFooterView.h; sourceTree = "<group>"; };
 		B5E585CD1C7B7A7800CE018D /* NTFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTFooterView.m; sourceTree = "<group>"; };
+		B5E6E0E41C83951B000802A9 /* NTConversation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTConversation.h; sourceTree = "<group>"; };
+		B5E6E0E51C83951B000802A9 /* NTConversation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTConversation.m; sourceTree = "<group>"; };
+		B5E6E0E71C839531000802A9 /* NTMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTMessage.h; sourceTree = "<group>"; };
+		B5E6E0E81C839531000802A9 /* NTMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTMessage.m; sourceTree = "<group>"; };
+		B5E6E0EA1C839597000802A9 /* NTUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTUser.h; sourceTree = "<group>"; };
+		B5E6E0EB1C839597000802A9 /* NTUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTUser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +194,12 @@
 		B5A4BB2B1C78FF7800CE2DD1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B5E6E0E41C83951B000802A9 /* NTConversation.h */,
+				B5E6E0E51C83951B000802A9 /* NTConversation.m */,
+				B5E6E0E71C839531000802A9 /* NTMessage.h */,
+				B5E6E0E81C839531000802A9 /* NTMessage.m */,
+				B5E6E0EA1C839597000802A9 /* NTUser.h */,
+				B5E6E0EB1C839597000802A9 /* NTUser.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -322,9 +337,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5E6E0E61C83951B000802A9 /* NTConversation.m in Sources */,
 				B593543C1C82561F007892CA /* NTSplitController.m in Sources */,
 				B53FE81E1C79ECD500835E43 /* NTSplitView.m in Sources */,
 				B5A4BB3A1C79A30800CE2DD1 /* GRVibrantTitlebarView.m in Sources */,
+				B5E6E0EC1C839597000802A9 /* NTUser.m in Sources */,
 				B5E585C41C7B6C5400CE018D /* NTDetailViewController.m in Sources */,
 				B5A4BB3C1C79A30800CE2DD1 /* GRVibrantTitleView.m in Sources */,
 				B5E585C51C7B6C5400CE018D /* NTMasterViewController.m in Sources */,
@@ -333,6 +350,7 @@
 				B5436D2E1C7F49C5004B716C /* NTMessageTableCellView.m in Sources */,
 				B543BB071C7CF03F0078454E /* NTTextFieldCell.m in Sources */,
 				B543BB041C7CE7E90078454E /* NTTextField.m in Sources */,
+				B5E6E0E91C839531000802A9 /* NTMessage.m in Sources */,
 				B5A4BB391C79A30800CE2DD1 /* GRSeparatorLineView.m in Sources */,
 				B534E8121C7F9BF6002E57B8 /* NTMessageTableRowView.m in Sources */,
 				B5E585CB1C7B711E00CE018D /* NTHeaderView.m in Sources */,
