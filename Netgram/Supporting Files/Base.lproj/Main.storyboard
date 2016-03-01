@@ -1003,8 +1003,8 @@
                                                                     <rect key="frame" x="1" y="1" width="597" height="46"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
-                                                                        <textField verticalHuggingPriority="749" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="z7M-of-j2a">
-                                                                            <rect key="frame" x="64" y="25" width="515" height="17"/>
+                                                                        <textField verticalHuggingPriority="749" horizontalCompressionResistancePriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z7M-of-j2a">
+                                                                            <rect key="frame" x="64" y="25" width="478" height="17"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="17" id="Fq6-eW-8IS"/>
                                                                             </constraints>
@@ -1018,7 +1018,7 @@
                                                                             <rect key="frame" x="20" y="6" width="36" height="36"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="36" id="JTr-cV-2va"/>
-                                                                                <constraint firstAttribute="width" secondItem="BEe-ns-dr5" secondAttribute="height" multiplier="1:1" id="QiJ-pe-xhC"/>
+                                                                                <constraint firstAttribute="height" constant="36" id="JVu-oO-bHy"/>
                                                                             </constraints>
                                                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="1Ro-Rw-RHH"/>
                                                                         </imageView>
@@ -1031,10 +1031,18 @@
                                                                             </textFieldCell>
                                                                         </textField>
                                                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="T9P-cX-GSS">
-                                                                            <rect key="frame" x="64" y="6" width="515" height="17"/>
+                                                                            <rect key="frame" x="64" y="6" width="478" height="17"/>
                                                                             <textFieldCell key="cell" enabled="NO" sendsActionOnEndEditing="YES" alignment="left" title="Sending..." id="C67-0A-3V2">
                                                                                 <font key="font" metaFont="system"/>
                                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                            </textFieldCell>
+                                                                        </textField>
+                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="244" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="H79-Qt-Wvn">
+                                                                            <rect key="frame" x="538" y="25" width="41" height="17"/>
+                                                                            <textFieldCell key="cell" enabled="NO" sendsActionOnEndEditing="YES" alignment="right" title="04:30" id="cmA-uj-WBK">
+                                                                                <font key="font" metaFont="system"/>
+                                                                                <color key="textColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                         </textField>
@@ -1042,21 +1050,26 @@
                                                                     <constraints>
                                                                         <constraint firstItem="BEe-ns-dr5" firstAttribute="leading" secondItem="zvM-4p-1wC" secondAttribute="leading" constant="20" id="2TN-AK-JxL"/>
                                                                         <constraint firstItem="BEe-ns-dr5" firstAttribute="top" secondItem="zvM-4p-1wC" secondAttribute="top" constant="4" id="5QM-Es-LK9"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="H79-Qt-Wvn" secondAttribute="trailing" constant="20" id="5j9-zS-7is"/>
+                                                                        <constraint firstItem="H79-Qt-Wvn" firstAttribute="leading" secondItem="z7M-of-j2a" secondAttribute="trailing" id="7MC-VU-sao"/>
                                                                         <constraint firstItem="T9P-cX-GSS" firstAttribute="top" secondItem="z7M-of-j2a" secondAttribute="bottom" constant="2" id="HKs-HZ-Wkn"/>
                                                                         <constraint firstAttribute="bottom" secondItem="T9P-cX-GSS" secondAttribute="bottom" constant="6" id="PrP-UK-G4R"/>
                                                                         <constraint firstItem="T9P-cX-GSS" firstAttribute="leading" secondItem="z7M-of-j2a" secondAttribute="leading" id="YoI-ME-5Db"/>
-                                                                        <constraint firstAttribute="trailing" secondItem="z7M-of-j2a" secondAttribute="trailing" constant="20" id="a17-2M-Cvo"/>
                                                                         <constraint firstItem="T9P-cX-GSS" firstAttribute="width" secondItem="z7M-of-j2a" secondAttribute="width" id="eig-Ek-vBz"/>
                                                                         <constraint firstItem="z7M-of-j2a" firstAttribute="leading" secondItem="BEe-ns-dr5" secondAttribute="trailing" constant="10" id="g3V-lM-CP6"/>
                                                                         <constraint firstItem="z7M-of-j2a" firstAttribute="top" secondItem="BEe-ns-dr5" secondAttribute="top" id="gLt-kO-uzM"/>
                                                                         <constraint firstItem="Lmj-eH-oAl" firstAttribute="centerX" secondItem="BEe-ns-dr5" secondAttribute="centerX" id="qRc-Sp-WT6"/>
+                                                                        <constraint firstItem="H79-Qt-Wvn" firstAttribute="top" secondItem="z7M-of-j2a" secondAttribute="top" id="r4G-51-vdp"/>
                                                                         <constraint firstItem="Lmj-eH-oAl" firstAttribute="centerY" secondItem="BEe-ns-dr5" secondAttribute="centerY" id="wQc-Pc-wxY"/>
                                                                     </constraints>
                                                                     <connections>
+                                                                        <outlet property="dateTextField" destination="H79-Qt-Wvn" id="VSD-fd-HHW"/>
                                                                         <outlet property="iconImageView" destination="BEe-ns-dr5" id="cw6-Hh-bxj"/>
+                                                                        <outlet property="iconImageViewHeightConstraint" destination="JVu-oO-bHy" id="o3g-r7-Mkz"/>
                                                                         <outlet property="iconTextField" destination="Lmj-eH-oAl" id="TBd-Df-H7S"/>
                                                                         <outlet property="messageField" destination="T9P-cX-GSS" id="dvM-wh-HsF"/>
                                                                         <outlet property="senderField" destination="z7M-of-j2a" id="8ox-nE-h8s"/>
+                                                                        <outlet property="senderTextFieldHeightConstraint" destination="Fq6-eW-8IS" id="ufI-ZX-oHT"/>
                                                                     </connections>
                                                                 </tableCellView>
                                                                 <customView identifier="RowView" id="zcs-v5-Om3" customClass="NTMessageTableRowView">
@@ -1109,6 +1122,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="headerView" destination="LJJ-m6-Guo" id="WOe-Hp-Ltm"/>
                         <outlet property="sendTextField" destination="SC7-jq-sTX" id="SIU-fA-OkP"/>
                         <outlet property="tableView" destination="3Ne-zx-kOW" id="muk-Bj-1FF"/>
                     </connections>

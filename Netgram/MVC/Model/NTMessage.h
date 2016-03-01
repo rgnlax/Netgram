@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "NTConversation.h"
-#import "NTUser.h"
+
+@class NTUser;
+@class NTConversation;
 
 @interface NTMessage : NSObject
 
@@ -19,5 +21,6 @@
 @property (nonatomic) NSDate *date;
 
 + (NSArray *)getMessagesByConversation:(NTConversation *)conversation offset:(NSInteger)offset limit:(NSInteger)limit;
+- (NSString *)prettyDateString;
 
 @end

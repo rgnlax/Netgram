@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NTMessage.h"
+#import "NTUser.h"
 
 @interface NTConversation : NSObject
 

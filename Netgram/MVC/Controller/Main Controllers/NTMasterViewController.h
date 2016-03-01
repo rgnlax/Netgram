@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "NTSplitController.h"
+#import "NTConversation.h"
 
 @interface NTMasterViewController : NSViewController<NSTableViewDelegate, NSTableViewDataSource>
 
@@ -16,5 +17,7 @@
 
 - (void)loadConversationAtIndex:(NSInteger)index;
 - (void)loadConversations;
+
+- (NTConversation *)currentConversation;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "NTMasterTableCellView.h"
+#import "NSColor+GRProKitHelpers.h"
 
 @implementation NTMasterTableCellView
 
@@ -36,5 +37,14 @@
         self.detailsField.textColor = [NSColor whiteColor];
     }
 }
+
+- (void)setIconTextFieldText:(NSString *)text {
+    [self.iconTextField setStringValue:text];
+    
+    self.iconImageView.layer.backgroundColor = [[NSColor colorWithString:text] lighterColor].CGColor;
+}
+
+
+
 
 @end

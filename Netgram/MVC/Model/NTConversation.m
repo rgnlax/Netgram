@@ -7,6 +7,7 @@
 //
 
 #import "NTConversation.h"
+#import "NTMessage.h"
 
 @implementation NTConversation
 
@@ -19,7 +20,8 @@
 }
 
 - (NSString *)lastMessage {
-    return nil;
+    NTMessage *message = (NTMessage *)[[self getMessages]lastObject];
+    return [NSString stringWithFormat:@"%@: %@", message.sender.nickname, message.text];
 }
 
 

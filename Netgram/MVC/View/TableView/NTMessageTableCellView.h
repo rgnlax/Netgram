@@ -14,7 +14,9 @@
 @property (weak) IBOutlet NSTextField *senderField;
 @property (weak) IBOutlet NSTextField *messageField;
 @property (weak) IBOutlet NSTextField *iconTextField;
+@property (weak) IBOutlet NSTextField *dateTextField;
 
 - (CGFloat)estimateHeight;
+- (void)setCompact:(BOOL)compact;
 
 @end

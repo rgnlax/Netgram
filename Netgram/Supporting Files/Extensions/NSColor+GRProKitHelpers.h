@@ -15,4 +15,5 @@
 @property (nonatomic, readonly) NSColor *__nonnull darkerColor;
 @property (nonatomic, readonly) NSColor *__nonnull lighterColor;
 
++ (NSColor *__nonnull)colorWithString:(NSString *__nonnull)seed;
 @end

@@ -8,12 +8,15 @@
 
 #import "NTDetailViewController.h"
 #import "NTMessageTableCellView.h"
+#import "NTHeaderView.h"
 #import "NTTextField.h"
 
 @interface NTDetailViewController()
 
+@property (weak) IBOutlet NTHeaderView *headerView;
 @property (weak) IBOutlet NTTextField *sendTextField;
 @property (nonatomic) NSMutableArray *dataSource;
+@property (nonatomic) NTConversation *conversation;
 
 @end
 
@@ -70,9 +73,18 @@
 #pragma mark - NSTableView Configuration
 
 - (void)configureCell:(NTMessageTableCellView *)cell forRow:(NSInteger)row {
-    [cell.messageField setStringValue:self.dataSource[row]];
-    [cell.iconTextField setStringValue:[NSString stringWithFormat:@"#%lu", row + 1]];
-    [cell.senderField setStringValue:@"COM#1"];
+    if ([self.dataSource[row] isKindOfClass:[NTMessage class]]) {
+        NTMessage *message = self.dataSource[row];
+        
+        [cell.messageField setStringValue:message.text];
+        [cell.iconTextField setStringValue:[NSString stringWithFormat:@"#%lu", row + 1]];
+        [cell.senderField setStringValue:message.sender.nickname];
+        [cell.dateTextField setStringValue:[message prettyDateString]];
+        
+//        if (row > 0 && message.sender.UID == [self lastMessageSender].UID) {
+//            [cell setCompact:true];
+//        }
+    }
 }
 
 #pragma mark - Notifications
@@ -82,7 +94,8 @@
 }
 
 - (void)tableViewMessageDidReceived {
-    NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:_dataSource.count - 1];
+    NSInteger lastIndex = self.dataSource.count == 0 ? 0 : self.dataSource.count - 1;
+    NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:lastIndex];
     [_tableView insertRowsAtIndexes:indexSet withAnimation:NSTableViewAnimationEffectFade];
     
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
@@ -95,31 +108,63 @@
 
 #pragma mark - Actions
 
-- (void)sendTextMessage {
-    if (_sendTextField.stringValue.length != 0) {
-        [_dataSource addObject:_sendTextField.stringValue];
-        [_sendTextField clear];
-        
-        [self tableViewMessageDidReceived];
-    }
+- (void)sendTextMessage:(NSString *)text {
+    //TODO: Database
+    NTMessage *message = [[NTMessage alloc]init];
+    NTUser *user = [[NTUser alloc]init];
+    
+    user.nickname = @"Superman";
+    user.UID = [user.nickname hash];
+    
+    message.text = text;
+    message.sender = user;
+    message.date = [NSDate date];
+    
+    [self.dataSource addObject:message];
+    
+    [_sendTextField clear];
+    [self tableViewMessageDidReceived];
 }
 
 -(void)controlTextDidEndEditing:(NSNotification *)notification {
     if ([[[notification userInfo] objectForKey:@"NSTextMovement"] intValue] == NSReturnTextMovement) {
         if (_sendTextField.stringValue.length != 0) {
-            [_dataSource addObject:_sendTextField.stringValue];
-            [_sendTextField clear];
-            
-            [self tableViewMessageDidReceived];
+            [self sendTextMessage:_sendTextField.stringValue];
         }
     }
 }
 
-- (void)loadConversation {
-    //Рандомное заполнение
-    int rand = random() % 10;
-    self.dataSource = rand > 5 ? [NSMutableArray array] : [NSMutableArray arrayWithObjects:@"Message", nil];
+- (void)loadConversation:(NTConversation *)conversation {
+    //TODO: Database
+    self.conversation = conversation;
+    
+    [self.dataSource removeAllObjects];
+    [self setupViews];
+}
+
+#pragma mark - Interface configuration
+
+- (void)setupViews {
+    [self.headerView.titleField setStringValue:self.conversation.name];
+    
     [self.tableView reloadData];
 }
+
+- (NTUser *__nullable)lastMessageSender {
+    if (self.dataSource.count != 0) {
+        //return ((NTMessage *)[self.dataSource lastObject]).sender;
+    }
+    return nil;
+}
+
+#pragma mark - Getters
+
+- (NSMutableArray *)dataSource {
+    if (!_dataSource) {
+        _dataSource = [[NSMutableArray alloc]init];
+    }
+    return _dataSource;
+}
+
 
 @end

@@ -13,4 +13,12 @@
 + (NSArray *)getMessagesByConversation:(NTConversation *)conversation offset:(NSInteger)offset limit:(NSInteger)limit {
     return nil;
 }
+
+- (NSString *)prettyDateString {
+    NSDateFormatter *timeFormat = [[NSDateFormatter alloc] init];
+    [timeFormat setDateFormat:@"HH:mm"];
+    
+    return [timeFormat stringFromDate:self.date];
+}
+
 @end

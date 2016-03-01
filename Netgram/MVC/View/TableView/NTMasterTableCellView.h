@@ -15,4 +15,6 @@
 @property (weak) IBOutlet NSImageView *iconImageView;
 @property (weak) IBOutlet NSTextField *iconTextField;
 
+- (void)setIconTextFieldText:(NSString *)text;
+
 @end

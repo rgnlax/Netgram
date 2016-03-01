@@ -11,7 +11,7 @@
 
 @interface NTMasterViewController()
 
-@property (nonatomic) NSArray *dataSource;
+@property (nonatomic) NSMutableArray *dataSource;
 
 @end
 
@@ -23,8 +23,22 @@
 }
 
 - (void)loadConversations {
-    self.dataSource = @[@"Broadcast", @"COM#1", @"COM#2"];
+    //TODO: Database
+    _dataSource = [NSMutableArray new];
+    NSArray *chats = @[@"Broadcast", @"COM#1", @"COM#2"];
+    for (NSString *name in chats) {
+        NTConversation *c = [[NTConversation alloc]init];
+        
+        c.name = name;
+        c.UID = [name hash];
+        
+        [self.dataSource addObject:c];
+    }
     [self.tableView reloadData];
+}
+
+- (NTConversation *)currentConversation {
+    return self.dataSource[self.tableView.selectedRow];
 }
 
 #pragma mark - NSTableView Delegate
@@ -39,9 +53,11 @@
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     NTMasterTableCellView *cell = (NTMasterTableCellView *)[tableView makeViewWithIdentifier:@"MasterCell" owner:tableView];
     
-    [cell.titleField setStringValue:self.dataSource[row]];
-    [cell.iconTextField setStringValue:[NSString stringWithFormat:@"#%lu", row + 1]];
-    [cell.detailsField setStringValue:@"COM#1: Go!"];
+    NTConversation *conversation = (NTConversation *)_dataSource[row];
+    
+    [cell.titleField setStringValue:conversation.name];
+    [cell setIconTextFieldText:[NSString stringWithFormat:@"#%lu", row + 1]];
+    [cell.detailsField setStringValue:[conversation lastMessage]];
     
     return cell;
 }

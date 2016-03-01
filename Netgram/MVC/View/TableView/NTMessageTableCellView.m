@@ -7,6 +7,12 @@
 //
 
 #import "NTMessageTableCellView.h"
+@interface NTMessageTableCellView()
+
+@property (weak) IBOutlet NSLayoutConstraint *iconImageViewHeightConstraint;
+@property (weak) IBOutlet NSLayoutConstraint *senderTextFieldHeightConstraint;
+
+@end
 
 @implementation NTMessageTableCellView
 
@@ -28,7 +34,30 @@
                    options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
                    context:nil];
     
+    CGFloat height = NSHeight(_senderField.bounds);
     return NSHeight(textSize) + NSHeight(_senderField.bounds) + 12;
+}
+
+#pragma mark - Customization
+
+- (void)setCompact:(BOOL)compact {
+    if (compact) {
+        self.iconImageViewHeightConstraint.constant = 0;
+        self.senderTextFieldHeightConstraint.constant = 0;
+        self.iconTextField.hidden = true;
+    } else {
+        self.iconImageViewHeightConstraint.constant = 36;
+        self.senderTextFieldHeightConstraint.constant = 17;
+        self.iconTextField.hidden = false;
+    }
+    
+    [self layoutSubtreeIfNeeded];
+}
+
+- (void)prepareForReuse {
+    [super prepareForReuse];
+    
+    [self setCompact:false];
 }
 
 

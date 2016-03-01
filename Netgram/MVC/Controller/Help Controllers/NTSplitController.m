@@ -34,13 +34,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setupInitialState];
-}
-
-- (void)loadView {
-    [super loadView];
-    
     [self setupControllers];
+    [self setupInitialState];
 }
 
 #pragma mark - Configuration
@@ -70,7 +65,7 @@
 #pragma mark - Setters
 - (void)setSelectedConversationIndex:(NSInteger)selectedConcersationIndex {
     _selectedConversationIndex = selectedConcersationIndex;
-    [_detailViewController loadConversation];
+    [_detailViewController loadConversation:[_masterViewController currentConversation]];
 }
 
 @end
