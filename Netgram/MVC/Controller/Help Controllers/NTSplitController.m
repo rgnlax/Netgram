@@ -63,8 +63,8 @@
 }
 
 #pragma mark - Setters
-- (void)setSelectedConversationIndex:(NSInteger)selectedConcersationIndex {
-    _selectedConversationIndex = selectedConcersationIndex;
+- (void)setSelectedConversationIndex:(NSInteger)selectedConversationIndex {
+    _selectedConversationIndex = selectedConversationIndex;
     [_detailViewController loadConversation:[_masterViewController currentConversation]];
 }
 

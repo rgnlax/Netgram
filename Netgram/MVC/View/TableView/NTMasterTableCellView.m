@@ -31,7 +31,7 @@
 - (void)repaintWithStyle:(NSBackgroundStyle)backgroundStyle {
     if (backgroundStyle == NSBackgroundStyleLight) {
         self.titleField.textColor = [NSColor darkGrayColor];
-        self.detailsField.textColor = [NSColor lightGrayColor];
+        self.detailsField.textColor = [[NSColor lightGrayColor]darkerColor];
     } else {
         self.titleField.textColor = [NSColor whiteColor];
         self.detailsField.textColor = [NSColor whiteColor];
@@ -41,7 +41,7 @@
 - (void)setIconTextFieldText:(NSString *)text {
     [self.iconTextField setStringValue:text];
     
-    self.iconImageView.layer.backgroundColor = [[NSColor colorWithString:text] lighterColor].CGColor;
+    self.iconImageView.layer.backgroundColor = [[[NSColor colorWithString:text] darkerColor]colorWithAlphaComponent:0.6].CGColor;
 }
 
 

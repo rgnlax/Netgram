@@ -63,7 +63,7 @@
         code += [string characterAtIndex:i];
     }
     
-    float value = (float)(sinf(code)*10000);
+    float value = (float)(sinf(code)*1000);
     value = value - floor(value);
     return value;
 }

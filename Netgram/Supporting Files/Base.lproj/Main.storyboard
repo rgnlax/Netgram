@@ -1003,7 +1003,7 @@
                                                                     <rect key="frame" x="1" y="1" width="597" height="46"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
-                                                                        <textField verticalHuggingPriority="749" horizontalCompressionResistancePriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z7M-of-j2a">
+                                                                        <textField verticalHuggingPriority="749" horizontalCompressionResistancePriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z7M-of-j2a">
                                                                             <rect key="frame" x="64" y="25" width="478" height="17"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="17" id="Fq6-eW-8IS"/>
@@ -1030,7 +1030,7 @@
                                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                         </textField>
-                                                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="T9P-cX-GSS">
+                                                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="751" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T9P-cX-GSS">
                                                                             <rect key="frame" x="64" y="6" width="478" height="17"/>
                                                                             <textFieldCell key="cell" enabled="NO" sendsActionOnEndEditing="YES" alignment="left" title="Sending..." id="C67-0A-3V2">
                                                                                 <font key="font" metaFont="system"/>
@@ -1038,11 +1038,11 @@
                                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                         </textField>
-                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="244" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="H79-Qt-Wvn">
+                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="244" verticalCompressionResistancePriority="751" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H79-Qt-Wvn">
                                                                             <rect key="frame" x="538" y="25" width="41" height="17"/>
                                                                             <textFieldCell key="cell" enabled="NO" sendsActionOnEndEditing="YES" alignment="right" title="04:30" id="cmA-uj-WBK">
-                                                                                <font key="font" metaFont="system"/>
-                                                                                <color key="textColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                                                <font key="font" metaFont="system" size="12"/>
+                                                                                <color key="textColor" red="0.46899801587301593" green="0.46899801587301593" blue="0.46899801587301593" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                         </textField>
