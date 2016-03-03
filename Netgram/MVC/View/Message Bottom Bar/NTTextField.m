@@ -29,7 +29,7 @@
 
 - (void)textDidEndEditing:(NSNotification *)notification {
     [super textDidEndEditing:notification];
-    _isEditing = NO;
+    //_isEditing = NO;
 }
 
 - (void)textDidChange:(NSNotification *)notification {
@@ -60,10 +60,11 @@
             
             intrinsicSize.height = usedRect.size.height;
         }
-        
+
         _lastIntrinsicSize = intrinsicSize;
         _hasLastIntrinsicSize = YES;
     }
+    
     return intrinsicSize;
 }
 
@@ -93,8 +94,7 @@
 
 - (void)clear {
     self.stringValue = @"";
-    [self layoutSubtreeIfNeeded];
-    //[self invalidateIntrinsicContentSize];
+    [self invalidateIntrinsicContentSize];
 }
 
 @end

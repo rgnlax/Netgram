@@ -53,7 +53,7 @@
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     NTMasterTableCellView *cell = (NTMasterTableCellView *)[tableView makeViewWithIdentifier:@"MasterCell" owner:tableView];
     
-    NTConversation *conversation = (NTConversation *)_dataSource[row];
+    NTConversation *conversation = (NTConversation *)self.dataSource[row];
     
     [cell.titleField setStringValue:conversation.name];
     [cell setIconTextFieldText:[NSString stringWithFormat:@"#%lu", row + 1]];

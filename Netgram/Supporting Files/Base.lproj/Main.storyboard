@@ -927,21 +927,24 @@
                                             <outlet property="titleField" destination="eTP-bH-aMq" id="bDw-yV-2wJ"/>
                                         </connections>
                                     </customView>
-                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="WIa-7b-LEs" userLabel="Footer View" customClass="NTFooterView">
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="WIa-7b-LEs" userLabel="Message Bottom Bar" customClass="NTMessageBottomBar">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
                                         <subviews>
                                             <visualEffectView appearanceType="vibrantLight" blendingMode="withinWindow" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="tEu-6x-pvm">
                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
                                                 <subviews>
                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7Y7-jp-Nog">
-                                                        <rect key="frame" x="545" y="9" width="35" height="32"/>
+                                                        <rect key="frame" x="543" y="9" width="37" height="32"/>
                                                         <buttonCell key="cell" type="bevel" title="Send" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="JLc-c9-cdE">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="system"/>
+                                                            <font key="font" metaFont="systemSemibold" size="13"/>
                                                         </buttonCell>
+                                                        <connections>
+                                                            <action selector="onSendButton:" target="WIa-7b-LEs" id="Fbj-co-aOC"/>
+                                                        </connections>
                                                     </button>
                                                     <textField focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="SC7-jq-sTX" customClass="NTTextField">
-                                                        <rect key="frame" x="16" y="10" width="513" height="29"/>
+                                                        <rect key="frame" x="16" y="10" width="511" height="29"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="DG6-Ws-fSm"/>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="29" id="Fxk-ly-b2m"/>
@@ -952,7 +955,7 @@
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                         <connections>
-                                                            <outlet property="delegate" destination="XfG-lQ-9wD" id="gCN-sq-dPE"/>
+                                                            <outlet property="delegate" destination="WIa-7b-LEs" id="VwA-zr-FNm"/>
                                                         </connections>
                                                     </textField>
                                                 </subviews>
@@ -972,6 +975,10 @@
                                             <constraint firstAttribute="trailing" secondItem="tEu-6x-pvm" secondAttribute="trailing" id="crd-ca-4cM"/>
                                             <constraint firstAttribute="bottom" secondItem="tEu-6x-pvm" secondAttribute="bottom" id="sik-os-C6R"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="messageTextField" destination="SC7-jq-sTX" id="RHG-sS-Mfs"/>
+                                            <outlet property="sendButton" destination="7Y7-jp-Nog" id="TBS-Na-FfZ"/>
+                                        </connections>
                                     </customView>
                                     <scrollView canDrawConcurrently="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="47" horizontalPageScroll="10" verticalLineScroll="47" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" findBarPosition="belowContent" translatesAutoresizingMaskIntoConstraints="NO" id="a7Z-e8-3rH">
                                         <rect key="frame" x="0.0" y="50" width="600" height="320"/>
@@ -1003,8 +1010,8 @@
                                                                     <rect key="frame" x="1" y="1" width="597" height="46"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
-                                                                        <textField verticalHuggingPriority="749" horizontalCompressionResistancePriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z7M-of-j2a">
-                                                                            <rect key="frame" x="64" y="25" width="478" height="17"/>
+                                                                        <textField verticalHuggingPriority="749" horizontalCompressionResistancePriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z7M-of-j2a">
+                                                                            <rect key="frame" x="64" y="25" width="481" height="17"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="17" id="Fq6-eW-8IS"/>
                                                                             </constraints>
@@ -1030,18 +1037,18 @@
                                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                         </textField>
-                                                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="751" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T9P-cX-GSS">
-                                                                            <rect key="frame" x="64" y="6" width="478" height="17"/>
+                                                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="T9P-cX-GSS">
+                                                                            <rect key="frame" x="64" y="6" width="481" height="17"/>
                                                                             <textFieldCell key="cell" enabled="NO" sendsActionOnEndEditing="YES" alignment="left" title="Sending..." id="C67-0A-3V2">
                                                                                 <font key="font" metaFont="system"/>
                                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                         </textField>
-                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="244" verticalCompressionResistancePriority="751" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H79-Qt-Wvn">
-                                                                            <rect key="frame" x="538" y="25" width="41" height="17"/>
+                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="244" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="H79-Qt-Wvn">
+                                                                            <rect key="frame" x="541" y="26" width="38" height="16"/>
                                                                             <textFieldCell key="cell" enabled="NO" sendsActionOnEndEditing="YES" alignment="right" title="04:30" id="cmA-uj-WBK">
-                                                                                <font key="font" metaFont="system" size="12"/>
+                                                                                <font key="font" metaFont="cellTitle"/>
                                                                                 <color key="textColor" red="0.46899801587301593" green="0.46899801587301593" blue="0.46899801587301593" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
@@ -1123,11 +1130,12 @@
                     </view>
                     <connections>
                         <outlet property="headerView" destination="LJJ-m6-Guo" id="WOe-Hp-Ltm"/>
-                        <outlet property="sendTextField" destination="SC7-jq-sTX" id="SIU-fA-OkP"/>
+                        <outlet property="messageBottomBar" destination="WIa-7b-LEs" id="slU-cV-RPg"/>
                         <outlet property="tableView" destination="3Ne-zx-kOW" id="muk-Bj-1FF"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController representsSharedInstance="YES" id="3Oa-Xw-Pzi"/>
             </objects>
             <point key="canvasLocation" x="767" y="735"/>
         </scene>

@@ -34,7 +34,6 @@
                    options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
                    context:nil];
     
-    CGFloat height = NSHeight(_senderField.bounds);
     return NSHeight(textSize) + NSHeight(_senderField.bounds) + 12;
 }
 

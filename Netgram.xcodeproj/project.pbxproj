@@ -13,8 +13,10 @@
 		B53FE81B1C79E72500835E43 /* NSColor+GRProKitHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = B53FE81A1C79E72500835E43 /* NSColor+GRProKitHelpers.m */; };
 		B53FE81E1C79ECD500835E43 /* NTSplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = B53FE81D1C79ECD500835E43 /* NTSplitView.m */; };
 		B5436D2E1C7F49C5004B716C /* NTMessageTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5436D2D1C7F49C5004B716C /* NTMessageTableCellView.m */; };
-		B543BB041C7CE7E90078454E /* NTTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B543BB031C7CE7E90078454E /* NTTextField.m */; };
-		B543BB071C7CF03F0078454E /* NTTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B543BB061C7CF03F0078454E /* NTTextFieldCell.m */; };
+		B57B6D8B1C88D48500C1C5AB /* NTMessageBottomBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B57B6D861C88D48500C1C5AB /* NTMessageBottomBar.m */; };
+		B57B6D8C1C88D48500C1C5AB /* NTTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B57B6D881C88D48500C1C5AB /* NTTextField.m */; };
+		B57B6D8D1C88D48500C1C5AB /* NTTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B57B6D8A1C88D48500C1C5AB /* NTTextFieldCell.m */; };
+		B592297C1C88B24E00536AE1 /* NSTableView+NTKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B592297B1C88B24E00536AE1 /* NSTableView+NTKit.m */; };
 		B593543C1C82561F007892CA /* NTSplitController.m in Sources */ = {isa = PBXBuildFile; fileRef = B593543A1C82561F007892CA /* NTSplitController.m */; };
 		B5A4BB241C78FF3000CE2DD1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A4BB1C1C78FF3000CE2DD1 /* AppDelegate.m */; };
 		B5A4BB251C78FF3000CE2DD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5A4BB1D1C78FF3000CE2DD1 /* Main.storyboard */; };
@@ -46,10 +48,14 @@
 		B53FE81D1C79ECD500835E43 /* NTSplitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTSplitView.m; sourceTree = "<group>"; };
 		B5436D2C1C7F49C5004B716C /* NTMessageTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NTMessageTableCellView.h; path = TableView/NTMessageTableCellView.h; sourceTree = "<group>"; };
 		B5436D2D1C7F49C5004B716C /* NTMessageTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NTMessageTableCellView.m; path = TableView/NTMessageTableCellView.m; sourceTree = "<group>"; };
-		B543BB021C7CE7E90078454E /* NTTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTTextField.h; sourceTree = "<group>"; };
-		B543BB031C7CE7E90078454E /* NTTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTTextField.m; sourceTree = "<group>"; };
-		B543BB051C7CF03F0078454E /* NTTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTTextFieldCell.h; sourceTree = "<group>"; };
-		B543BB061C7CF03F0078454E /* NTTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTTextFieldCell.m; sourceTree = "<group>"; };
+		B57B6D851C88D48500C1C5AB /* NTMessageBottomBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTMessageBottomBar.h; sourceTree = "<group>"; };
+		B57B6D861C88D48500C1C5AB /* NTMessageBottomBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTMessageBottomBar.m; sourceTree = "<group>"; };
+		B57B6D871C88D48500C1C5AB /* NTTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTTextField.h; sourceTree = "<group>"; };
+		B57B6D881C88D48500C1C5AB /* NTTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTTextField.m; sourceTree = "<group>"; };
+		B57B6D891C88D48500C1C5AB /* NTTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTTextFieldCell.h; sourceTree = "<group>"; };
+		B57B6D8A1C88D48500C1C5AB /* NTTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTTextFieldCell.m; sourceTree = "<group>"; };
+		B592297A1C88B24E00536AE1 /* NSTableView+NTKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTableView+NTKit.h"; sourceTree = "<group>"; };
+		B592297B1C88B24E00536AE1 /* NSTableView+NTKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTableView+NTKit.m"; sourceTree = "<group>"; };
 		B593543A1C82561F007892CA /* NTSplitController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTSplitController.m; sourceTree = "<group>"; };
 		B593543B1C82561F007892CA /* NTSplitController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTSplitController.h; sourceTree = "<group>"; };
 		B5A4BB1B1C78FF3000CE2DD1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -114,6 +120,8 @@
 			children = (
 				B53FE8191C79E72500835E43 /* NSColor+GRProKitHelpers.h */,
 				B53FE81A1C79E72500835E43 /* NSColor+GRProKitHelpers.m */,
+				B592297A1C88B24E00536AE1 /* NSTableView+NTKit.h */,
+				B592297B1C88B24E00536AE1 /* NSTableView+NTKit.m */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -123,6 +131,19 @@
 			children = (
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		B57B6D841C88D48500C1C5AB /* Message Bottom Bar */ = {
+			isa = PBXGroup;
+			children = (
+				B57B6D851C88D48500C1C5AB /* NTMessageBottomBar.h */,
+				B57B6D861C88D48500C1C5AB /* NTMessageBottomBar.m */,
+				B57B6D871C88D48500C1C5AB /* NTTextField.h */,
+				B57B6D881C88D48500C1C5AB /* NTTextField.m */,
+				B57B6D891C88D48500C1C5AB /* NTTextFieldCell.h */,
+				B57B6D8A1C88D48500C1C5AB /* NTTextFieldCell.m */,
+			);
+			path = "Message Bottom Bar";
 			sourceTree = "<group>";
 		};
 		B59353BB1C82556E007892CA /* Help Controllers */ = {
@@ -176,6 +197,7 @@
 		B5A4BB2A1C78FF7800CE2DD1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B57B6D841C88D48500C1C5AB /* Message Bottom Bar */,
 				B53FE8111C79DFEB00835E43 /* TableView */,
 				B53FE81C1C79ECD500835E43 /* NTSplitView.h */,
 				B53FE81D1C79ECD500835E43 /* NTSplitView.m */,
@@ -183,10 +205,6 @@
 				B5E585CA1C7B711E00CE018D /* NTHeaderView.m */,
 				B5E585CC1C7B7A7800CE018D /* NTFooterView.h */,
 				B5E585CD1C7B7A7800CE018D /* NTFooterView.m */,
-				B543BB021C7CE7E90078454E /* NTTextField.h */,
-				B543BB031C7CE7E90078454E /* NTTextField.m */,
-				B543BB051C7CF03F0078454E /* NTTextFieldCell.h */,
-				B543BB061C7CF03F0078454E /* NTTextFieldCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -337,10 +355,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B57B6D8B1C88D48500C1C5AB /* NTMessageBottomBar.m in Sources */,
 				B5E6E0E61C83951B000802A9 /* NTConversation.m in Sources */,
+				B592297C1C88B24E00536AE1 /* NSTableView+NTKit.m in Sources */,
 				B593543C1C82561F007892CA /* NTSplitController.m in Sources */,
 				B53FE81E1C79ECD500835E43 /* NTSplitView.m in Sources */,
 				B5A4BB3A1C79A30800CE2DD1 /* GRVibrantTitlebarView.m in Sources */,
+				B57B6D8C1C88D48500C1C5AB /* NTTextField.m in Sources */,
 				B5E6E0EC1C839597000802A9 /* NTUser.m in Sources */,
 				B5E585C41C7B6C5400CE018D /* NTDetailViewController.m in Sources */,
 				B5A4BB3C1C79A30800CE2DD1 /* GRVibrantTitleView.m in Sources */,
@@ -348,8 +369,6 @@
 				B5A4BB271C78FF3000CE2DD1 /* main.m in Sources */,
 				B5A4BB3B1C79A30800CE2DD1 /* GRVibrantTitlebarWindow.m in Sources */,
 				B5436D2E1C7F49C5004B716C /* NTMessageTableCellView.m in Sources */,
-				B543BB071C7CF03F0078454E /* NTTextFieldCell.m in Sources */,
-				B543BB041C7CE7E90078454E /* NTTextField.m in Sources */,
 				B5E6E0E91C839531000802A9 /* NTMessage.m in Sources */,
 				B5A4BB391C79A30800CE2DD1 /* GRSeparatorLineView.m in Sources */,
 				B534E8121C7F9BF6002E57B8 /* NTMessageTableRowView.m in Sources */,
@@ -359,6 +378,7 @@
 				B53FE81B1C79E72500835E43 /* NSColor+GRProKitHelpers.m in Sources */,
 				B5A4BB241C78FF3000CE2DD1 /* AppDelegate.m in Sources */,
 				B53FE8141C79E01200835E43 /* NTMasterTableCellView.m in Sources */,
+				B57B6D8D1C88D48500C1C5AB /* NTTextFieldCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

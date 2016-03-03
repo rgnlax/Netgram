@@ -9,8 +9,9 @@
 #import <Cocoa/Cocoa.h>
 #import "NTConversation.h"
 #import "NTSplitController.h"
+#import "NTMessageBottomBar.h"
 
-@interface NTDetailViewController : NSViewController<NSTableViewDataSource, NSTableViewDelegate>
+@interface NTDetailViewController : NSViewController<NSTableViewDataSource, NSTableViewDelegate, NTMessageBottomBarSendDelegate>
 
 @property (weak, nonatomic) IBOutlet NSTableView *tableView;
 @property (nonatomic) id<NTSplitTableViewControllerDelegate> splitDelegate;

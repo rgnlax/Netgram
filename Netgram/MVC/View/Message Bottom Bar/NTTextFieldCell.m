@@ -30,7 +30,8 @@
         aRect.origin.y += topOffset;
         aRect.size.height -= topOffset;
     }
-    
+    //NSLog(@"%f %f %f %f", aRect.origin.x, aRect.origin.y, aRect.size.height, aRect.size.width);
     return aRect;
 }
+
 @end
