@@ -16,7 +16,6 @@
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    [[NTSessionManager manager]authenticateWithName:@"Pentaho"];
     [[NTSessionManager manager]connect];
 }
 
