@@ -13,4 +13,6 @@
 @property (nonatomic) NSInteger UID;
 @property (nonatomic) NSString *nickname;
 
+- (instancetype)initWithNickname:(NSString *)nickname;
+
 @end

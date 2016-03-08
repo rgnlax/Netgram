@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B534E8121C7F9BF6002E57B8 /* NTMessageTableRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = B534E8111C7F9BF6002E57B8 /* NTMessageTableRowView.m */; };
+		B53BC7341C8DB5660070A1EE /* NTSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B53BC7331C8DB5660070A1EE /* NTSessionManager.m */; };
+		B53BC73D1C8DC7AE0070A1EE /* NTAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B53BC73B1C8DC7AE0070A1EE /* NTAuthViewController.m */; };
+		B53BC73E1C8DC7AE0070A1EE /* NTAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B53BC73C1C8DC7AE0070A1EE /* NTAuthViewController.xib */; };
 		B53FE8141C79E01200835E43 /* NTMasterTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = B53FE8131C79E01200835E43 /* NTMasterTableCellView.m */; };
 		B53FE8171C79E43000835E43 /* NTMasterTableRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = B53FE8161C79E43000835E43 /* NTMasterTableRowView.m */; };
 		B53FE81B1C79E72500835E43 /* NSColor+GRProKitHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = B53FE81A1C79E72500835E43 /* NSColor+GRProKitHelpers.m */; };
@@ -38,6 +41,11 @@
 /* Begin PBXFileReference section */
 		B534E8101C7F9BF6002E57B8 /* NTMessageTableRowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NTMessageTableRowView.h; path = TableView/NTMessageTableRowView.h; sourceTree = "<group>"; };
 		B534E8111C7F9BF6002E57B8 /* NTMessageTableRowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NTMessageTableRowView.m; path = TableView/NTMessageTableRowView.m; sourceTree = "<group>"; };
+		B53BC7321C8DB5660070A1EE /* NTSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTSessionManager.h; sourceTree = "<group>"; };
+		B53BC7331C8DB5660070A1EE /* NTSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTSessionManager.m; sourceTree = "<group>"; };
+		B53BC73A1C8DC7AE0070A1EE /* NTAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTAuthViewController.h; sourceTree = "<group>"; };
+		B53BC73B1C8DC7AE0070A1EE /* NTAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTAuthViewController.m; sourceTree = "<group>"; };
+		B53BC73C1C8DC7AE0070A1EE /* NTAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NTAuthViewController.xib; sourceTree = "<group>"; };
 		B53FE8121C79E01200835E43 /* NTMasterTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NTMasterTableCellView.h; path = TableView/NTMasterTableCellView.h; sourceTree = "<group>"; };
 		B53FE8131C79E01200835E43 /* NTMasterTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NTMasterTableCellView.m; path = TableView/NTMasterTableCellView.m; sourceTree = "<group>"; };
 		B53FE8151C79E43000835E43 /* NTMasterTableRowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NTMasterTableRowView.h; path = TableView/NTMasterTableRowView.h; sourceTree = "<group>"; };
@@ -129,6 +137,8 @@
 		B55C58C41C7BBC790008682F /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				B53BC7321C8DB5660070A1EE /* NTSessionManager.h */,
+				B53BC7331C8DB5660070A1EE /* NTSessionManager.m */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -151,6 +161,9 @@
 			children = (
 				B593543A1C82561F007892CA /* NTSplitController.m */,
 				B593543B1C82561F007892CA /* NTSplitController.h */,
+				B53BC73A1C8DC7AE0070A1EE /* NTAuthViewController.h */,
+				B53BC73B1C8DC7AE0070A1EE /* NTAuthViewController.m */,
+				B53BC73C1C8DC7AE0070A1EE /* NTAuthViewController.xib */,
 			);
 			path = "Help Controllers";
 			sourceTree = "<group>";
@@ -345,6 +358,7 @@
 			files = (
 				B5A4BB251C78FF3000CE2DD1 /* Main.storyboard in Resources */,
 				B5A4BB281C78FF3000CE2DD1 /* Assets.xcassets in Resources */,
+				B53BC73E1C8DC7AE0070A1EE /* NTAuthViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B53BC73D1C8DC7AE0070A1EE /* NTAuthViewController.m in Sources */,
 				B57B6D8B1C88D48500C1C5AB /* NTMessageBottomBar.m in Sources */,
 				B5E6E0E61C83951B000802A9 /* NTConversation.m in Sources */,
 				B592297C1C88B24E00536AE1 /* NSTableView+NTKit.m in Sources */,
@@ -371,6 +386,7 @@
 				B5436D2E1C7F49C5004B716C /* NTMessageTableCellView.m in Sources */,
 				B5E6E0E91C839531000802A9 /* NTMessage.m in Sources */,
 				B5A4BB391C79A30800CE2DD1 /* GRSeparatorLineView.m in Sources */,
+				B53BC7341C8DB5660070A1EE /* NTSessionManager.m in Sources */,
 				B534E8121C7F9BF6002E57B8 /* NTMessageTableRowView.m in Sources */,
 				B5E585CB1C7B711E00CE018D /* NTHeaderView.m in Sources */,
 				B5E585CE1C7B7A7800CE018D /* NTFooterView.m in Sources */,

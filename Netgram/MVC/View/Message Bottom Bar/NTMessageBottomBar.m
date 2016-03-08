@@ -46,6 +46,7 @@
         [self messageDidSend];
     }
 }
+
 - (void)messageDidSend {
     [self trim];
     [[NSSound soundNamed:@"Pop"]play];

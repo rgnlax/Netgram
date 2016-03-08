@@ -77,15 +77,7 @@
 
 - (void)sendTextMessage:(NSString *)text {
     //TODO: Database
-    NTMessage *message = [[NTMessage alloc]init];
-    NTUser *user = [[NTUser alloc]init];
-    
-    user.nickname = @"Superman";
-    user.UID = [user.nickname hash];
-    
-    message.text = text;
-    message.sender = user;
-    message.date = [NSDate date];
+    NTMessage *message = [[NTMessage alloc]initWithText:text sender:[[NTSessionManager manager]user] inConversation:self.conversation];
     
     [self.dataSource addObject:message];
     [self tableViewMessageReceiveHandler];
@@ -150,10 +142,7 @@
     if ([self.dataSource[row] isKindOfClass:[NTMessage class]]) {
         NTMessage *message = self.dataSource[row];
         
-        [cell.messageField setStringValue:message.text];
-        [cell.iconTextField setStringValue:[NSString stringWithFormat:@"#%lu", row + 1]];
-        // [cell.senderField setStringValue:message.sender.nickname];
-        [cell.dateTextField setStringValue:[message prettyDateString]];
+        [cell setViewData:message];
     }
 }
 

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9532"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NTAuthViewController">
+            <connections>
+                <outlet property="nicknameTextField" destination="0e0-5a-8x1" id="zwc-cI-Vql"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="724" height="539"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oVN-a4-2pM">
+                    <rect key="frame" x="297" y="359" width="130" height="130"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="130" id="GE1-FX-aZJ"/>
+                        <constraint firstAttribute="width" secondItem="oVN-a4-2pM" secondAttribute="height" multiplier="1:1" id="WkB-A4-B8s"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="logo" id="WEm-0U-Mfd"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FMR-Ue-SUF">
+                    <rect key="frame" x="305" y="313" width="114" height="36"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Netgram" id="w2D-aR-H6u">
+                        <font key="font" size="23" name="Lato-Medium"/>
+                        <color key="textColor" red="0.20933774353249723" green="0.21339674758792415" blue="0.21260324588294874" alpha="0.81407374100719421" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" misplaced="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="0e0-5a-8x1">
+                    <rect key="frame" x="262" y="233" width="200" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="A74-j5-7TE"/>
+                    </constraints>
+                    <textFieldCell key="cell" selectable="YES" editable="YES" state="on" focusRingType="none" alignment="center" placeholderString="Enter your nickname" drawsBackground="YES" id="6et-eL-Gkg">
+                        <font key="font" size="20" name="Lato-Regular"/>
+                        <color key="textColor" red="0.28114666005291" green="0.28114666005291" blue="0.28114666005291" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
+                    </textFieldCell>
+                </textField>
+                <box verticalHuggingPriority="750" misplaced="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="JIs-1F-RAQ">
+                    <rect key="frame" x="262" y="222" width="200" height="5"/>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <font key="titleFont" metaFont="system"/>
+                </box>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="biW-rA-hj9">
+                    <rect key="frame" x="260" y="20" width="204" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="17h-HV-O7d"/>
+                    </constraints>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="By typing your nickname here, you are accepting the license agreements." id="HfR-ac-ohT">
+                        <font key="font" size="11" name="Lato-Regular"/>
+                        <color key="textColor" red="0.60784313725490191" green="0.62745098039215685" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="JIs-1F-RAQ" firstAttribute="centerX" secondItem="0e0-5a-8x1" secondAttribute="centerX" id="1a1-t9-Xsx"/>
+                <constraint firstItem="oVN-a4-2pM" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="50" id="3A6-Db-4uX"/>
+                <constraint firstItem="JIs-1F-RAQ" firstAttribute="width" secondItem="0e0-5a-8x1" secondAttribute="width" id="5r5-1Z-YgJ"/>
+                <constraint firstItem="biW-rA-hj9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="JIs-1F-RAQ" secondAttribute="bottom" constant="20" id="DNI-7h-9Tj"/>
+                <constraint firstItem="oVN-a4-2pM" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="Fyi-u9-WDA"/>
+                <constraint firstAttribute="bottom" secondItem="biW-rA-hj9" secondAttribute="bottom" constant="20" id="f3E-ef-Zmb"/>
+                <constraint firstItem="JIs-1F-RAQ" firstAttribute="top" secondItem="0e0-5a-8x1" secondAttribute="bottom" constant="8" id="glR-ud-apd"/>
+                <constraint firstItem="biW-rA-hj9" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="kYR-hB-jwo"/>
+                <constraint firstItem="FMR-Ue-SUF" firstAttribute="top" secondItem="oVN-a4-2pM" secondAttribute="bottom" constant="5" id="l3s-P6-MKn"/>
+                <constraint firstItem="0e0-5a-8x1" firstAttribute="top" secondItem="FMR-Ue-SUF" secondAttribute="bottom" constant="50" id="rMn-ic-T9b"/>
+                <constraint firstItem="0e0-5a-8x1" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="rf7-RI-R9z"/>
+                <constraint firstItem="FMR-Ue-SUF" firstAttribute="centerX" secondItem="oVN-a4-2pM" secondAttribute="centerX" id="zHF-ch-gfH"/>
+            </constraints>
+            <point key="canvasLocation" x="445" y="252.5"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="logo" width="128" height="128"/>
+    </resources>
+</document>

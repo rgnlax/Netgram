@@ -21,4 +21,16 @@
     return [timeFormat stringFromDate:self.date];
 }
 
+- (instancetype)initWithText:(NSString *)text sender:(NTUser *)sender inConversation:(NTConversation *)conversation {
+    if (self = [super init]) {
+        self.text = text;
+        self.sender = sender;
+        self.conversation = conversation;
+        
+        self.date = [NSDate date];
+        self.UID = [text hash] - [self.date hash];
+    }
+    return self;
+}
+
 @end

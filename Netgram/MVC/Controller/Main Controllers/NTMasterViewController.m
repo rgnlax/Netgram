@@ -13,9 +13,14 @@
 
 @property (nonatomic) NSMutableArray *dataSource;
 
+@property (weak) IBOutlet NSTextField *chatNameTextField;
+@property (weak) IBOutlet NSTextField *chatDescriptionTextField;
+
 @end
 
 @implementation NTMasterViewController
+
+#pragma mark NTMasterViewController Lifecycle
 
 - (void)loadConversationAtIndex:(NSInteger)index {
     NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:index];
@@ -34,7 +39,14 @@
         
         [self.dataSource addObject:c];
     }
+    
+    [self setupHeaderView];
     [self.tableView reloadData];
+}
+
+- (void)setupHeaderView {
+    self.chatNameTextField.stringValue = @"Network";
+    self.chatDescriptionTextField.stringValue = [NSString stringWithFormat:@"%lu chats", self.dataSource.count];
 }
 
 - (NTConversation *)currentConversation {

@@ -6,9 +6,11 @@
 //  Copyright © 2016 MP. All rights reserved.
 //
 
+#import "NTSessionManager.h"
 #import "NTSplitController.h"
 #import "NTMasterViewController.h"
 #import "NTDetailViewController.h"
+
 
 @interface NTSplitController ()
 
@@ -29,16 +31,21 @@
     return self;
 }
 
-#pragma mark - Lifecycle
+#pragma mark - NTSplitTableViewControllerDelegate Lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self setupControllers];
-    [self setupInitialState];
+    
+    if ([[NTSessionManager manager]isConnected]) {
+        [self setupInitialState];
+    } else {
+        [self setupAuthController];
+    }
 }
 
-#pragma mark - Configuration
+#pragma mark - NTSplitTableViewControllerDelegate Configuration
 
 - (void)setupControllers {
     _masterViewController = (NTMasterViewController *)[self.splitViewItems firstObject].viewController;
@@ -46,12 +53,24 @@
     
     _masterViewController.splitDelegate = self;
     _detailViewController.splitDelegate = self;
-    
-    [_masterViewController loadConversations];
 }
 
 - (void)setupInitialState {
+    [_masterViewController loadConversations];
     [_masterViewController loadConversationAtIndex:_selectedConversationIndex];
+}
+
+- (void)setupAuthController {
+    NTAuthViewController *authController = [[NTAuthViewController alloc]init];
+    [authController presentInViewController:self.detailViewController withDelegate:self];
+}
+
+#pragma mark - NTAuthViewController Delegate
+- (void)authViewController:(NTAuthViewController *)controller didFinishWithName:(NSString *)name {
+    [controller dismissAuthViewController];
+
+    [[NTSessionManager manager]authenticateWithName:name];
+    [self setupInitialState];
 }
 
 #pragma mark - NTSplitTableViewControllerDelegate Delegate
@@ -62,7 +81,7 @@
     }
 }
 
-#pragma mark - Setters
+#pragma mark - NTSplitTableViewController Properties
 - (void)setSelectedConversationIndex:(NSInteger)selectedConversationIndex {
     _selectedConversationIndex = selectedConversationIndex;
     [_detailViewController loadConversation:[_masterViewController currentConversation]];

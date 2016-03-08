@@ -7,7 +7,10 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "NTSessionManager.h"
+
 #import "NTConversation.h"
+
 #import "NTSplitController.h"
 #import "NTMessageBottomBar.h"
 

@@ -7,6 +7,8 @@
 //
 
 #import "NTMessageTableCellView.h"
+#import "NSColor+GRProKitHelpers.h"
+
 @interface NTMessageTableCellView()
 
 @property (weak) IBOutlet NSLayoutConstraint *iconImageViewHeightConstraint;
@@ -37,7 +39,7 @@
     return NSHeight(textSize) + NSHeight(_senderField.bounds) + 12;
 }
 
-#pragma mark - Customization
+#pragma mark - NTMessageTableCellView Customization
 
 - (void)setCompact:(BOOL)compact {
     if (compact) {
@@ -57,6 +59,14 @@
     [super prepareForReuse];
     
     [self setCompact:false];
+}
+
+- (void)setViewData:(NTMessage *)message {
+    [self.messageField setStringValue:message.text];
+    [self.senderField setStringValue:message.sender.nickname];
+    [self.dateTextField setStringValue:[message prettyDateString]];
+    [self.iconImageView.layer setBackgroundColor:[NSColor colorWithString:message.sender.nickname].CGColor];
+    [self.iconTextField setStringValue:[message.sender.nickname substringToIndex:1]];
 }
 
 

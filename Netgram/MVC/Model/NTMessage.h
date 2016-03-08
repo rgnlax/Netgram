@@ -21,6 +21,8 @@
 @property (nonatomic) NSDate *date;
 
 + (NSArray *)getMessagesByConversation:(NTConversation *)conversation offset:(NSInteger)offset limit:(NSInteger)limit;
+
+- (instancetype)initWithText:(NSString *)text sender:(NTUser *)user inConversation:(NTConversation *)conversation;
 - (NSString *)prettyDateString;
 
 @end

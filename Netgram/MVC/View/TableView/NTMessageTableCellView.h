@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "NTMessage.h"
 
 @interface NTMessageTableCellView : NSTableCellView
 
@@ -18,5 +19,6 @@
 
 - (CGFloat)estimateHeight;
 - (void)setCompact:(BOOL)compact;
+- (void)setViewData:(NTMessage *)message;
 
 @end

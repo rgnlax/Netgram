@@ -10,4 +10,12 @@
 
 @implementation NTUser
 
+- (instancetype)initWithNickname:(NSString *)nickname {
+    if (self = [super init]) {
+        self.nickname = nickname;
+        self.UID = [nickname hash] - [[NSDate date]hash];
+    }
+    return self;
+}
+
 @end

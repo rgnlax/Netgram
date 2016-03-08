@@ -7,6 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "NTAuthViewController.h"
+
 @protocol NTSplitTableViewControllerDelegate
 
 @optional
@@ -14,6 +16,6 @@
 
 @end
 
-@interface NTSplitController : NSSplitViewController<NTSplitTableViewControllerDelegate>
+@interface NTSplitController : NSSplitViewController<NTSplitTableViewControllerDelegate, NTAuthViewControllerDelegate>
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "NTSessionManager.h"
 
 @interface AppDelegate ()
 
@@ -15,11 +16,12 @@
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
+    [[NTSessionManager manager]authenticateWithName:@"Pentaho"];
+    [[NTSessionManager manager]connect];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
-    // Insert code here to tear down your application
+    [[NTSessionManager manager]disconnect];
 }
 
 @end
