@@ -25,6 +25,8 @@
 - (void)loadConversationAtIndex:(NSInteger)index {
     NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:index];
     [self.tableView selectRowIndexes:indexSet byExtendingSelection:NO];
+    
+    [self.splitDelegate splitViewController:self didSelectRow:index inTableView:self.tableView];
 }
 
 - (void)loadConversations {
@@ -49,8 +51,8 @@
     self.chatDescriptionTextField.stringValue = [NSString stringWithFormat:@"%lu chats", self.dataSource.count];
 }
 
-- (NTConversation *)currentConversation {
-    return self.dataSource[self.tableView.selectedRow];
+- (NTConversation *)conversationAtIndex:(NSInteger)index {
+    return self.dataSource[index];
 }
 
 #pragma mark - NSTableView Delegate

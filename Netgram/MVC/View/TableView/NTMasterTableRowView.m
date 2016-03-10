@@ -19,12 +19,7 @@
     if (self.selectionHighlightStyle != NSTableViewSelectionHighlightStyleNone) {
         NSColor *selectionColor;
         
-        if (![self shoudDrawAsKey]) {
-            selectionColor = [NSColor colorWithCalibratedRed:0.3 green:0.3 blue:0.5 alpha:0.15];
-        } else {
-            selectionColor = [NSColor colorWithCalibratedRed: 0.267 green: 0.467 blue: 0.698 alpha: 0.95];
-        }
-        
+        selectionColor = [NSColor colorWithCalibratedRed: 0.267 green: 0.467 blue: 0.698 alpha: 0.90];
         [selectionColor setFill];
         
         NSBezierPath *selectionPath = [NSBezierPath bezierPathWithRect:dirtyRect];

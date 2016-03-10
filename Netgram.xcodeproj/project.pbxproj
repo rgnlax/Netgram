@@ -36,6 +36,9 @@
 		B5E6E0E61C83951B000802A9 /* NTConversation.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E6E0E51C83951B000802A9 /* NTConversation.m */; };
 		B5E6E0E91C839531000802A9 /* NTMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E6E0E81C839531000802A9 /* NTMessage.m */; };
 		B5E6E0EC1C839597000802A9 /* NTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E6E0EB1C839597000802A9 /* NTUser.m */; };
+		B5F45B161C9200050099757B /* NTOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F45B141C9200050099757B /* NTOverlayView.m */; };
+		B5F45B171C9200050099757B /* NTOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5F45B151C9200050099757B /* NTOverlayView.xib */; };
+		B5F45B1A1C9200880099757B /* NSView+NTKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F45B191C9200880099757B /* NSView+NTKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +98,11 @@
 		B5E6E0E81C839531000802A9 /* NTMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTMessage.m; sourceTree = "<group>"; };
 		B5E6E0EA1C839597000802A9 /* NTUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTUser.h; sourceTree = "<group>"; };
 		B5E6E0EB1C839597000802A9 /* NTUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTUser.m; sourceTree = "<group>"; };
+		B5F45B131C9200050099757B /* NTOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTOverlayView.h; sourceTree = "<group>"; };
+		B5F45B141C9200050099757B /* NTOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTOverlayView.m; sourceTree = "<group>"; };
+		B5F45B151C9200050099757B /* NTOverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NTOverlayView.xib; sourceTree = "<group>"; };
+		B5F45B181C9200880099757B /* NSView+NTKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+NTKit.h"; sourceTree = "<group>"; };
+		B5F45B191C9200880099757B /* NSView+NTKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+NTKit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +138,8 @@
 				B53FE81A1C79E72500835E43 /* NSColor+GRProKitHelpers.m */,
 				B592297A1C88B24E00536AE1 /* NSTableView+NTKit.h */,
 				B592297B1C88B24E00536AE1 /* NSTableView+NTKit.m */,
+				B5F45B181C9200880099757B /* NSView+NTKit.h */,
+				B5F45B191C9200880099757B /* NSView+NTKit.m */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -159,8 +169,8 @@
 		B59353BB1C82556E007892CA /* Help Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B593543A1C82561F007892CA /* NTSplitController.m */,
 				B593543B1C82561F007892CA /* NTSplitController.h */,
+				B593543A1C82561F007892CA /* NTSplitController.m */,
 				B53BC73A1C8DC7AE0070A1EE /* NTAuthViewController.h */,
 				B53BC73B1C8DC7AE0070A1EE /* NTAuthViewController.m */,
 				B53BC73C1C8DC7AE0070A1EE /* NTAuthViewController.xib */,
@@ -210,6 +220,7 @@
 		B5A4BB2A1C78FF7800CE2DD1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B5F45B121C9200050099757B /* Overlay */,
 				B57B6D841C88D48500C1C5AB /* Message Bottom Bar */,
 				B53FE8111C79DFEB00835E43 /* TableView */,
 				B53FE81C1C79ECD500835E43 /* NTSplitView.h */,
@@ -298,6 +309,16 @@
 			path = "Main Controllers";
 			sourceTree = "<group>";
 		};
+		B5F45B121C9200050099757B /* Overlay */ = {
+			isa = PBXGroup;
+			children = (
+				B5F45B131C9200050099757B /* NTOverlayView.h */,
+				B5F45B141C9200050099757B /* NTOverlayView.m */,
+				B5F45B151C9200050099757B /* NTOverlayView.xib */,
+			);
+			path = Overlay;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -357,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5A4BB251C78FF3000CE2DD1 /* Main.storyboard in Resources */,
+				B5F45B171C9200050099757B /* NTOverlayView.xib in Resources */,
 				B5A4BB281C78FF3000CE2DD1 /* Assets.xcassets in Resources */,
 				B53BC73E1C8DC7AE0070A1EE /* NTAuthViewController.xib in Resources */,
 			);
@@ -371,6 +393,7 @@
 			files = (
 				B53BC73D1C8DC7AE0070A1EE /* NTAuthViewController.m in Sources */,
 				B57B6D8B1C88D48500C1C5AB /* NTMessageBottomBar.m in Sources */,
+				B5F45B161C9200050099757B /* NTOverlayView.m in Sources */,
 				B5E6E0E61C83951B000802A9 /* NTConversation.m in Sources */,
 				B592297C1C88B24E00536AE1 /* NSTableView+NTKit.m in Sources */,
 				B593543C1C82561F007892CA /* NTSplitController.m in Sources */,
@@ -382,6 +405,7 @@
 				B5A4BB3C1C79A30800CE2DD1 /* GRVibrantTitleView.m in Sources */,
 				B5E585C51C7B6C5400CE018D /* NTMasterViewController.m in Sources */,
 				B5A4BB271C78FF3000CE2DD1 /* main.m in Sources */,
+				B5F45B1A1C9200880099757B /* NSView+NTKit.m in Sources */,
 				B5A4BB3B1C79A30800CE2DD1 /* GRVibrantTitlebarWindow.m in Sources */,
 				B5436D2E1C7F49C5004B716C /* NTMessageTableCellView.m in Sources */,
 				B5E6E0E91C839531000802A9 /* NTMessage.m in Sources */,

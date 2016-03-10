@@ -13,6 +13,7 @@
 
 @property (nonatomic, weak) IBOutlet NSButton *sendButton;
 @property (nonatomic, weak) IBOutlet NTTextField *messageTextField;
+@property (nonatomic, weak) IBOutlet NSVisualEffectView *backgroundView;
 
 @end
 
@@ -57,5 +58,10 @@
     self.sendButton.enabled = false;
 }
 
+#pragma mark - NTMessageBottomBar Overrides
+
+- (void)setHidden:(BOOL)hidden {
+    self.backgroundView.hidden = hidden;
+}
 
 @end

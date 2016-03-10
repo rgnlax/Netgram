@@ -49,13 +49,17 @@
 #pragma mark - NTDetailViewController Lifecycle
 
 - (void)loadConversation:(NTConversation *)conversation {
-    //TODO: Database
     self.conversation = conversation;
+    
     [self setupViews];
 }
 
 - (void)setupViews {
+    [self.messageBottomBar setHidden:self.conversation==nil];
+    
     [self.headerView.titleField setStringValue:self.conversation.name];
+    [self.headerView.subtitleField setStringValue:@"online"];
+    
     [self.tableView reloadData];
 }
 

@@ -10,7 +10,9 @@
 #import "NTSplitController.h"
 #import "NTMasterViewController.h"
 #import "NTDetailViewController.h"
+#import "NTOverlayView.h"
 
+#define INITIAL_CONVERSATION -1
 
 @interface NTSplitController ()
 
@@ -18,20 +20,21 @@
 @property (nonatomic) NTDetailViewController *detailViewController;
 
 @property (nonatomic) NSInteger selectedConversationIndex;
+@property (nonatomic) NTOverlayView *overlayView;
 
 @end
 
 @implementation NTSplitController
 
-- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    
-    _selectedConversationIndex = 0;
-    
+#pragma mark - NTSplitTableViewControllerDelegate Lifecycle
+
+- (instancetype)initWithCoder:(NSCoder *)coder {
+    if (self = [super initWithCoder:coder]) {
+        _selectedConversationIndex = -1;
+        _overlayView = [NTOverlayView new];
+    }
     return self;
 }
-
-#pragma mark - NTSplitTableViewControllerDelegate Lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -57,7 +60,7 @@
 
 - (void)setupInitialState {
     [_masterViewController loadConversations];
-    [_masterViewController loadConversationAtIndex:_selectedConversationIndex];
+    [self.overlayView presentInView:self.detailViewController.view withText:@"Start with selecting a chat"];
 }
 
 - (void)setupAuthController {
@@ -66,6 +69,7 @@
 }
 
 #pragma mark - NTAuthViewController Delegate
+
 - (void)authViewController:(NTAuthViewController *)controller didFinishWithName:(NSString *)name {
     [controller dismissAuthViewController];
 
@@ -82,9 +86,20 @@
 }
 
 #pragma mark - NTSplitTableViewController Properties
+
 - (void)setSelectedConversationIndex:(NSInteger)selectedConversationIndex {
-    _selectedConversationIndex = selectedConversationIndex;
-    [_detailViewController loadConversation:[_masterViewController currentConversation]];
+    if (_selectedConversationIndex != selectedConversationIndex) {
+        if (selectedConversationIndex < 0) {
+            self.overlayView.hidden = false;
+        } else {
+            _selectedConversationIndex = selectedConversationIndex;
+            [_detailViewController loadConversation:[_masterViewController conversationAtIndex:selectedConversationIndex]];
+            
+            self.overlayView.hidden = true;
+        }
+        
+    }
+    
 }
 
 @end

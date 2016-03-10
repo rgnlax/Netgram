@@ -731,7 +731,7 @@
                                                                             <rect key="frame" x="61" y="10" width="180" height="14"/>
                                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="0X8-Fk-rya">
                                                                                 <font key="font" metaFont="smallSystem"/>
-                                                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                                                <color key="textColor" red="0.47750869314506583" green="0.47750869314506583" blue="0.47750869314506583" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                         </textField>
@@ -902,16 +902,16 @@
                                         <rect key="frame" x="0.0" y="370" width="600" height="50"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eTP-bH-aMq">
-                                                <rect key="frame" x="270" y="24" width="60" height="18"/>
-                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="COM #1" id="i4L-HJ-7wX">
+                                                <rect key="frame" x="296" y="24" width="8" height="18"/>
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="i4L-HJ-7wX">
                                                     <font key="font" metaFont="system" size="14"/>
                                                     <color key="textColor" red="0.1226851852" green="0.1226851852" blue="0.1226851852" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZKR-LV-KxW">
-                                                <rect key="frame" x="279" y="8" width="42" height="16"/>
-                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="online" id="mEj-8P-WVu">
+                                                <rect key="frame" x="296" y="8" width="8" height="16"/>
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="mEj-8P-WVu">
                                                     <font key="font" metaFont="cellTitle"/>
                                                     <color key="textColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -926,6 +926,7 @@
                                             <constraint firstItem="ZKR-LV-KxW" firstAttribute="top" secondItem="eTP-bH-aMq" secondAttribute="bottom" id="wIC-zB-LvY"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="subtitleField" destination="ZKR-LV-KxW" id="2hc-Q7-niC"/>
                                             <outlet property="titleField" destination="eTP-bH-aMq" id="bDw-yV-2wJ"/>
                                         </connections>
                                     </customView>
@@ -978,6 +979,7 @@
                                             <constraint firstAttribute="bottom" secondItem="tEu-6x-pvm" secondAttribute="bottom" id="sik-os-C6R"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="backgroundView" destination="tEu-6x-pvm" id="MUR-xD-0Ek"/>
                                             <outlet property="messageTextField" destination="SC7-jq-sTX" id="RHG-sS-Mfs"/>
                                             <outlet property="sendButton" destination="7Y7-jp-Nog" id="TBS-Na-FfZ"/>
                                         </connections>

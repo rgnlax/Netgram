@@ -21,20 +21,20 @@
     [super awakeFromNib];
     
     [self.iconImageView setWantsLayer: YES];
-    
-    self.iconImageView.layer.backgroundColor = [[NSColor selectedKnobColor] CGColor];
 
     self.iconImageView.layer.cornerRadius = 25;
     self.iconImageView.layer.masksToBounds = YES;
 }
 
 - (void)repaintWithStyle:(NSBackgroundStyle)backgroundStyle {
-    if (backgroundStyle == NSBackgroundStyleLight) {
-        self.titleField.textColor = [NSColor darkGrayColor];
-        self.detailsField.textColor = [[NSColor lightGrayColor]darkerColor];
-    } else {
-        self.titleField.textColor = [NSColor whiteColor];
-        self.detailsField.textColor = [NSColor whiteColor];
+    if ([self shoudDrawAsKey] && [self keyResponder]) {
+        if (backgroundStyle == NSBackgroundStyleLight) {
+            self.titleField.textColor = [NSColor darkGrayColor];
+            self.detailsField.textColor = [[NSColor lightGrayColor]darkerColor];
+        } else {
+            self.titleField.textColor = [NSColor whiteColor];
+            self.detailsField.textColor = [NSColor whiteColor];
+        }
     }
 }
 
@@ -44,7 +44,13 @@
     self.iconImageView.layer.backgroundColor = [[[NSColor colorWithString:text] darkerColor]colorWithAlphaComponent:0.6].CGColor;
 }
 
+- (BOOL)shoudDrawAsKey {
+    return NSApp.active && _window.isKeyWindow;
+}
 
+- (BOOL)keyResponder {
+    return [_window.firstResponder isEqualTo:self.superview.superview];
+}
 
 
 @end

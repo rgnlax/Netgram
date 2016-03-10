@@ -18,6 +18,6 @@
 - (void)loadConversationAtIndex:(NSInteger)index;
 - (void)loadConversations;
 
-- (NTConversation *)currentConversation;
+- (NTConversation *)conversationAtIndex:(NSInteger)index;
 
 @end

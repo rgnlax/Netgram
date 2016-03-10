@@ -11,5 +11,6 @@
 @interface NTHeaderView : NSView
 
 @property (weak) IBOutlet NSTextField *titleField;
+@property (weak) IBOutlet NSTextField *subtitleField;
 
 @end

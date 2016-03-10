@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9532"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NTOverlayView"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe" customClass="NTOverlayView">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NVn-ey-y1V">
+                    <rect key="frame" x="150" y="128" width="182" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Start with selecting one chat" id="h8X-oq-uw1">
+                        <font key="font" metaFont="system" size="14"/>
+                        <color key="textColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="NVn-ey-y1V" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="4Kz-W4-uo3"/>
+                <constraint firstItem="NVn-ey-y1V" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="RkW-rX-paP"/>
+            </constraints>
+            <connections>
+                <outlet property="textField" destination="NVn-ey-y1V" id="l8q-2a-DhY"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="228"/>
+        </customView>
+    </objects>
+</document>
