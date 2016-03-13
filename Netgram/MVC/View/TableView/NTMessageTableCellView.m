@@ -66,7 +66,7 @@
     [self.senderField setStringValue:message.sender.nickname];
     [self.dateTextField setStringValue:[message prettyDateString]];
     [self.iconImageView.layer setBackgroundColor:[NSColor colorWithString:message.sender.nickname].CGColor];
-    [self.iconTextField setStringValue:[message.sender.nickname substringToIndex:1]];
+    [self.iconTextField setStringValue:[[message.sender.nickname substringToIndex:1]uppercaseString]];
 }
 
 

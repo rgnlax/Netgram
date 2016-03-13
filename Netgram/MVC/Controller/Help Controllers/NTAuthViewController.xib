@@ -14,11 +14,11 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customView id="Hz6-mo-xeY">
+        <customView misplaced="YES" id="Hz6-mo-xeY">
             <rect key="frame" x="0.0" y="0.0" width="724" height="468"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <imageView wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oVN-a4-2pM">
+                <imageView wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oVN-a4-2pM">
                     <rect key="frame" x="297" y="258" width="130" height="130"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="130" id="GE1-FX-aZJ"/>
@@ -26,11 +26,11 @@
                     </constraints>
                     <shadow key="shadow" blurRadius="5">
                         <size key="offset" width="0.0" height="-2"/>
-                        <color key="color" red="0.57289599867724861" green="0.57289599867724861" blue="0.57289599867724861" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="color" red="0.57289599867724861" green="0.57289599867724861" blue="0.57289599867724861" alpha="0.70076438848920863" colorSpace="calibratedRGB"/>
                     </shadow>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="logo" id="WEm-0U-Mfd"/>
                 </imageView>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FMR-Ue-SUF">
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FMR-Ue-SUF">
                     <rect key="frame" x="314" y="218" width="97" height="35"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Netgram" id="w2D-aR-H6u">
                         <font key="font" size="23" name="Lato-Medium"/>
@@ -38,13 +38,13 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="0e0-5a-8x1">
+                <textField focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" misplaced="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="0e0-5a-8x1">
                     <rect key="frame" x="262" y="138" width="200" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="200" id="A74-j5-7TE"/>
                     </constraints>
                     <textFieldCell key="cell" selectable="YES" editable="YES" state="on" focusRingType="none" alignment="center" placeholderString="Enter your nickname" drawsBackground="YES" id="6et-eL-Gkg">
-                        <font key="font" size="20" name="Lato-Regular"/>
+                        <font key="font" size="18" name="Lato-Regular"/>
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
                     </textFieldCell>
