@@ -10,11 +10,14 @@
 #import "NTMessage.h"
 #import "NTUser.h"
 
+@class NTMessage;
+
 @interface NTConversation : NSObject
 
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSInteger UID;
 
+- (void)addMessage:(NTMessage *)message;
 - (NSArray *)getMessages;
 - (NSString *)lastMessage;
 - (NSArray *)getUsers;

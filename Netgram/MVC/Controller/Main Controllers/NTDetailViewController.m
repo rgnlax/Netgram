@@ -40,6 +40,8 @@
     [super viewDidLoad];
     
     self.messageBottomBar.sendDelegate = self;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tableViewMessageReceiveHandler) name:@"MessageNotification" object:nil];
 }
 
 - (void)dealloc {
@@ -50,6 +52,7 @@
 
 - (void)loadConversation:(NTConversation *)conversation {
     self.conversation = conversation;
+    [self.dataSource addObjectsFromArray:[conversation getMessages]];
     
     [self setupViews];
 }
@@ -84,7 +87,9 @@
     NTMessage *message = [[NTMessage alloc]initWithText:text sender:[[NTSessionManager manager]user] inConversation:self.conversation];
     
     [self.dataSource addObject:message];
-    [self tableViewMessageReceiveHandler];
+    
+    NSDictionary *userInfo = [NSDictionary dictionaryWithObject:message forKey:@"message"];
+    [[NSNotificationCenter defaultCenter] postNotificationName: @"MessageNotification" object:nil userInfo:userInfo];
 }
 
 #pragma mark - NTMessageBottomBar Delegate

@@ -12,6 +12,7 @@
 @interface NTMasterViewController()
 
 @property (nonatomic) NSMutableArray *dataSource;
+@property (nonatomic) NSInteger selectedConversation;
 
 @property (weak) IBOutlet NSTextField *chatNameTextField;
 @property (weak) IBOutlet NSTextField *chatDescriptionTextField;
@@ -20,7 +21,15 @@
 
 @implementation NTMasterViewController
 
-#pragma mark NTMasterViewController Lifecycle
+#pragma mark - NSViewController Lifecycle
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newMessageHandler) name:@"MessageNotification" object:nil];
+}
+
+#pragma mark - NTMasterViewController Lifecycle
 
 - (void)loadConversationAtIndex:(NSInteger)index {
     NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:index];
@@ -52,10 +61,19 @@
 }
 
 - (NTConversation *)conversationAtIndex:(NSInteger)index {
+    self.selectedConversation = index;
     return self.dataSource[index];
 }
 
+#pragma mark - NTMasterViewController Notifications
+
+- (void)newMessageHandler {
+    [self.tableView reloadData];
+    [self.tableView selectRowIndexes:[NSIndexSet indexSetWithIndex:self.selectedConversation] byExtendingSelection:NO];
+}
+
 #pragma mark - NSTableView Delegate
+
 - (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
     return 60.0;
 }

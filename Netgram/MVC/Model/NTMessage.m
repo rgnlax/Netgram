@@ -25,7 +25,9 @@
     if (self = [super init]) {
         self.text = text;
         self.sender = sender;
+        
         self.conversation = conversation;
+        [self.conversation addMessage:self];
         
         self.date = [NSDate date];
         self.UID = [text hash] - [self.date hash];
