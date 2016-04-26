@@ -70,10 +70,10 @@
 
 #pragma mark - NTAuthViewController Delegate
 
-- (void)authViewController:(NTAuthViewController *)controller didFinishWithName:(NSString *)name {
+- (void)authViewController:(NTAuthViewController *)controller didFinishWithObject:(id)object {
     [controller dismissAuthViewController];
 
-    [[NTSessionManager manager]authenticateWithName:name];
+    [[NTSessionManager manager]authenticate:object];
     [self setupInitialState];
 }
 

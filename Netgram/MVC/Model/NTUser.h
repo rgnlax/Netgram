@@ -13,6 +13,7 @@
 @property (nonatomic) NSInteger UID;
 @property (nonatomic) NSString *nickname;
 
-- (instancetype)initWithNickname:(NSString *)nickname;
+- (instancetype)initWithNickname:(NSString *)nickname andID:(NSInteger)userID;
++ (instancetype)userFromObject:(id)object;
 
 @end

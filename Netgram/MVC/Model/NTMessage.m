@@ -21,18 +21,34 @@
     return [timeFormat stringFromDate:self.date];
 }
 
-- (instancetype)initWithText:(NSString *)text sender:(NTUser *)sender inConversation:(NTConversation *)conversation {
+
+- (instancetype)initWithText:(NSString *)text sender:(NTUser *)sender id:(NSInteger)ID date:(NSDate *)date inConversation:(NTConversation *)conversation {
     if (self = [super init]) {
         self.text = text;
         self.sender = sender;
+        self.UID = ID;
         
         self.conversation = conversation;
         [self.conversation addMessage:self];
         
-        self.date = [NSDate date];
-        self.UID = [text hash] - [self.date hash];
+        self.date = date;
     }
     return self;
+}
+
++ (NSMutableArray *)messagesFromObjects:(id)objects inConversation:(NTConversation *)conversation {
+    NSMutableArray *array = [NSMutableArray array];
+    
+    for (id object in objects) {
+        NTMessage *m = [[NTMessage alloc]initWithText:object[@"text"]
+                                               sender:[NTUser userFromObject:object[@"sender"]]
+                                                   id:[object[@"id"] integerValue]
+                                                 date:[NSDate dateWithTimeIntervalSince1970:[object[@"date"] integerValue]]
+                                       inConversation:conversation];
+        [array addObject:m];
+    }
+
+    return array;
 }
 
 @end

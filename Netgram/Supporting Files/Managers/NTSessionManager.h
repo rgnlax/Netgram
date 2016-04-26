@@ -15,7 +15,7 @@
 
 + (instancetype)manager;
 
-- (void)authenticateWithName:(NSString *)name;
+- (void)authenticate:(id)user;
 - (NTUser *)user;
 
 - (void)connect;

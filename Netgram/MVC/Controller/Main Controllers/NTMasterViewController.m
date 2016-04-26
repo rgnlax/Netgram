@@ -8,6 +8,8 @@
 
 #import "NTMasterViewController.h"
 #import "NTMasterTableCellView.h"
+#import "NTSessionManager.h"
+#import "NTAPIManager.h"
 
 @interface NTMasterViewController()
 
@@ -39,20 +41,12 @@
 }
 
 - (void)loadConversations {
-    //TODO: Database
-    _dataSource = [NSMutableArray new];
-    NSArray *chats = @[@"Broadcast", @"COM#1", @"COM#2"];
-    for (NSString *name in chats) {
-        NTConversation *c = [[NTConversation alloc]init];
+    [[NTAPIManager manager]getConversationsByUserID:[NTSessionManager manager].user.UID completion:^(id objects) {
+        [self.dataSource addObjectsFromArray:[NTConversation conversationsFromObjects:objects]];
         
-        c.name = name;
-        c.UID = [name hash];
-        
-        [self.dataSource addObject:c];
-    }
-    
-    [self setupHeaderView];
-    [self.tableView reloadData];
+        [self setupHeaderView];
+        [self.tableView reloadData];
+    }];
 }
 
 - (void)setupHeaderView {
@@ -63,6 +57,15 @@
 - (NTConversation *)conversationAtIndex:(NSInteger)index {
     self.selectedConversation = index;
     return self.dataSource[index];
+}
+
+#pragma mark - NTMasterViewController Getters
+
+- (NSMutableArray *)dataSource {
+    if (!_dataSource) {
+        _dataSource = [[NSMutableArray alloc]init];
+    }
+    return _dataSource;
 }
 
 #pragma mark - NTMasterViewController Notifications
@@ -87,7 +90,7 @@
     
     NTConversation *conversation = (NTConversation *)self.dataSource[row];
     
-    [cell.titleField setStringValue:conversation.name];
+    [cell.titleField setStringValue:conversation.title];
     [cell setIconTextFieldText:[NSString stringWithFormat:@"#%lu", row + 1]];
     [cell.detailsField setStringValue:[conversation lastMessage]];
     

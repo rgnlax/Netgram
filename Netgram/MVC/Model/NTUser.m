@@ -10,12 +10,17 @@
 
 @implementation NTUser
 
-- (instancetype)initWithNickname:(NSString *)nickname {
+- (instancetype)initWithNickname:(NSString *)nickname andID:(NSInteger)userID {
     if (self = [super init]) {
         self.nickname = nickname;
-        self.UID = [nickname hash] - [[NSDate date]hash];
+        self.UID = userID;
     }
     return self;
+}
+
++ (instancetype)userFromObject:(id)object {
+    NTUser *user = [[NTUser alloc]initWithNickname:object[@"nickname"] andID:[object[@"id"] integerValue]];
+    return user;
 }
 
 @end

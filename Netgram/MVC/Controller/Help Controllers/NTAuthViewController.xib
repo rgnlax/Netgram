@@ -8,6 +8,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NTAuthViewController">
             <connections>
+                <outlet property="activityIndicator" destination="LNr-0m-OUx" id="cjJ-ng-PJ1"/>
                 <outlet property="nicknameTextField" destination="0e0-5a-8x1" id="zwc-cI-Vql"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
@@ -66,6 +67,9 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
+                <progressIndicator hidden="YES" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="LNr-0m-OUx">
+                    <rect key="frame" x="470" y="140" width="16" height="16"/>
+                </progressIndicator>
             </subviews>
             <constraints>
                 <constraint firstItem="JIs-1F-RAQ" firstAttribute="centerX" secondItem="0e0-5a-8x1" secondAttribute="centerX" id="1a1-t9-Xsx"/>
@@ -75,10 +79,12 @@
                 <constraint firstItem="oVN-a4-2pM" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="Fyi-u9-WDA"/>
                 <constraint firstAttribute="bottom" secondItem="biW-rA-hj9" secondAttribute="bottom" constant="20" id="f3E-ef-Zmb"/>
                 <constraint firstItem="JIs-1F-RAQ" firstAttribute="top" secondItem="0e0-5a-8x1" secondAttribute="bottom" constant="8" id="glR-ud-apd"/>
+                <constraint firstItem="LNr-0m-OUx" firstAttribute="centerY" secondItem="0e0-5a-8x1" secondAttribute="centerY" constant="5" id="jVz-Ne-Gw2"/>
                 <constraint firstItem="biW-rA-hj9" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="kYR-hB-jwo"/>
                 <constraint firstItem="FMR-Ue-SUF" firstAttribute="top" secondItem="oVN-a4-2pM" secondAttribute="bottom" constant="5" id="l3s-P6-MKn"/>
                 <constraint firstItem="0e0-5a-8x1" firstAttribute="top" secondItem="FMR-Ue-SUF" secondAttribute="bottom" constant="50" id="rMn-ic-T9b"/>
                 <constraint firstItem="0e0-5a-8x1" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="rf7-RI-R9z"/>
+                <constraint firstItem="LNr-0m-OUx" firstAttribute="leading" secondItem="0e0-5a-8x1" secondAttribute="trailing" constant="8" id="stF-hQ-YP5"/>
                 <constraint firstItem="FMR-Ue-SUF" firstAttribute="centerX" secondItem="oVN-a4-2pM" secondAttribute="centerX" id="zHF-ch-gfH"/>
             </constraints>
             <point key="canvasLocation" x="445" y="252.5"/>

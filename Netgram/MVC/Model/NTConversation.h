@@ -14,12 +14,16 @@
 
 @interface NTConversation : NSObject
 
-@property (nonatomic) NSString *name;
+@property (nonatomic) NSString *title;
 @property (nonatomic) NSInteger UID;
+
+- (instancetype)initWithTitle:(NSString *)title andUID:(NSInteger)UID;
 
 - (void)addMessage:(NTMessage *)message;
 - (NSArray *)getMessages;
 - (NSString *)lastMessage;
 - (NSArray *)getUsers;
++ (NSMutableArray *)conversationsFromObjects:(id)objects;
+- (void)updateMessagesWithCompletion:(void(^)())completion;
 
 @end

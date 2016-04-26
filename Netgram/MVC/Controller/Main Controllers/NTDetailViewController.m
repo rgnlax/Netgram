@@ -6,6 +6,7 @@
 //  Copyright © 2016 MP. All rights reserved.
 //
 #import "NSTableView+NTKit.h"
+#import "NTAPIManager.h"
 
 #import "NTDetailViewController.h"
 #import "NTMessageTableCellView.h"
@@ -52,18 +53,28 @@
 
 - (void)loadConversation:(NTConversation *)conversation {
     self.conversation = conversation;
-    [self.dataSource addObjectsFromArray:[conversation getMessages]];
     
-    [self setupViews];
+    [NSTimer scheduledTimerWithTimeInterval:1.0f
+                                     target:self selector:@selector(updateConversation)
+                                   userInfo:nil
+                                    repeats:YES];
+}
+
+- (void)updateConversation {
+    [self.conversation updateMessagesWithCompletion:^{
+        self.dataSource = [NSMutableArray arrayWithArray:[self.conversation getMessages]];
+        [self setupViews];
+    }];
 }
 
 - (void)setupViews {
     [self.messageBottomBar setHidden:self.conversation==nil];
     
-    [self.headerView.titleField setStringValue:self.conversation.name];
+    [self.headerView.titleField setStringValue:self.conversation.title];
     [self.headerView.subtitleField setStringValue:@"online"];
     
     [self.tableView reloadData];
+    [self.tableView scrollRowToVisible:[[NSIndexSet indexSetWithIndex:self.dataSource.count - 1] lastIndex] animate:true];
 }
 
 #pragma mark - NTDetailViewController Notifications
@@ -83,13 +94,13 @@
 #pragma mark - NTDetailViewController Actions
 
 - (void)sendTextMessage:(NSString *)text {
-    //TODO: Database
-    NTMessage *message = [[NTMessage alloc]initWithText:text sender:[[NTSessionManager manager]user] inConversation:self.conversation];
-    
+    NTMessage *message = [[NTMessage alloc]initWithText:text sender:[[NTSessionManager manager]user] id:1 date:[NSDate date] inConversation:self.conversation];
     [self.dataSource addObject:message];
     
-    NSDictionary *userInfo = [NSDictionary dictionaryWithObject:message forKey:@"message"];
-    [[NSNotificationCenter defaultCenter] postNotificationName: @"MessageNotification" object:nil userInfo:userInfo];
+    [[NTAPIManager manager]sendMessage:message completion:^{
+        NSDictionary *userInfo = [NSDictionary dictionaryWithObject:message forKey:@"message"];
+        [[NSNotificationCenter defaultCenter] postNotificationName: @"MessageNotification" object:nil userInfo:userInfo];
+    }];
 }
 
 #pragma mark - NTMessageBottomBar Delegate
@@ -111,7 +122,6 @@
 
 - (void)setConversation:(NTConversation *)conversation {
     _conversation = conversation;
-    //TODO: Reload datasource
     [_dataSource removeAllObjects];
 }
 

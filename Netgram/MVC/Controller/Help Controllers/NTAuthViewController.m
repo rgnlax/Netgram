@@ -7,11 +7,13 @@
 //
 
 #import "NTAuthViewController.h"
+#import "NTAPIManager.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface NTAuthViewController ()
 
 @property (weak) IBOutlet NSTextField *nicknameTextField;
+@property (weak) IBOutlet NSProgressIndicator *activityIndicator;
 
 @end
 
@@ -55,13 +57,21 @@
     }];
 }
 
+- (void)showActivityIndicator {
+    self.activityIndicator.hidden = false;
+    [self.activityIndicator startAnimation:nil];
+}
+
 #pragma mark - NSTextField Delegate
 
 - (void)controlTextDidEndEditing:(NSNotification *)notification {
     if ([[[notification userInfo] objectForKey:@"NSTextMovement"] intValue] == NSReturnTextMovement) {
         NSString *nickname = self.nicknameTextField.stringValue;
         if (nickname.length > 0) {
-            [self.authDelegate authViewController:self didFinishWithName:nickname];
+            [[NTAPIManager manager]loginWithNickname:nickname completion:^(id object){
+                [self.authDelegate authViewController:self didFinishWithObject:object];
+            }];
+            [self showActivityIndicator];
         }
     }
 }

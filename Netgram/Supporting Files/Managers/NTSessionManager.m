@@ -7,6 +7,7 @@
 //
 
 #import "NTSessionManager.h"
+#import "NTAPIManager.h"
 
 @interface NTSessionManager()
 
@@ -48,8 +49,12 @@
 
 #pragma mark - NTSessionManager User
 
-- (void)authenticateWithName:(NSString *)name {
-    self.user = [[NTUser alloc]initWithNickname:name];
+- (void)authenticate:(id)user {
+    NSString *nickname = [user objectForKey:@"nickname"];
+    NSInteger userID = [[user objectForKey:@"id"]integerValue];
+    
+    self.user = [[NTUser alloc]initWithNickname:nickname andID:userID];
+    
     if (!self.isConnected) {
         [self connect];
     }

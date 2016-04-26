@@ -16,11 +16,11 @@
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    [[NTSessionManager manager]connect];
+    //[[NTSessionManager manager]connect];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
-    [[NTSessionManager manager]disconnect];
+    //[[NTSessionManager manager]disconnect];
 }
 
 @end

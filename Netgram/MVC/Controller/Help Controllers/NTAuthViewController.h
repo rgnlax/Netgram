@@ -13,7 +13,7 @@
 @protocol NTAuthViewControllerDelegate
 
 @optional
-- (void)authViewController:(NTAuthViewController *)controller didFinishWithName:(NSString *)name;
+- (void)authViewController:(NTAuthViewController *)controller didFinishWithObject:(id)object;
 
 @end
 
