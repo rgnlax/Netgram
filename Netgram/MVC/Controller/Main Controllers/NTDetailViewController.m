@@ -63,7 +63,7 @@
 - (void)updateConversation {
     [self.conversation updateMessagesWithCompletion:^{
         self.dataSource = [NSMutableArray arrayWithArray:[self.conversation getMessages]];
-        [self setupViews];
+        [self.tableView reloadData];
     }];
 }
 

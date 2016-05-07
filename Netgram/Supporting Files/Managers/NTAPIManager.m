@@ -9,6 +9,7 @@
 #import "NTAPIManager.h"
 #import "NTSessionManager.h"
 #import "NTMessage.h"
+#import <NSHash/NSString+NSHash.h>
 #import <AFNetworking.h>
 
 @interface NTAPIManager ()
@@ -79,7 +80,8 @@
     [self.manager POST:url parameters:@{@"text":message.text,
                                         @"date":[NSNumber numberWithInt:[message.date timeIntervalSince1970]],
                                         @"conversation_id": [NSNumber numberWithInt:message.conversation.UID],
-                                        @"sender_id": [NSNumber numberWithInt:message.sender.UID]}
+                                        @"sender_id": [NSNumber numberWithInt:message.sender.UID],
+                                        @"checksum": [message.text MD5]}
               progress:nil
                success:^(NSURLSessionTask *task, id responseObject) {
                    completion();

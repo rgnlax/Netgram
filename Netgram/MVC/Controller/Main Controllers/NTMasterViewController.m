@@ -18,6 +18,7 @@
 
 @property (weak) IBOutlet NSTextField *chatNameTextField;
 @property (weak) IBOutlet NSTextField *chatDescriptionTextField;
+@property (weak) IBOutlet NSView *messageBar;
 
 @end
 
@@ -50,8 +51,10 @@
 }
 
 - (void)setupHeaderView {
+    self.
     self.chatNameTextField.stringValue = @"Network";
     self.chatDescriptionTextField.stringValue = [NSString stringWithFormat:@"%lu chats", self.dataSource.count];
+    self.messageBar.hidden = false;
 }
 
 - (NTConversation *)conversationAtIndex:(NSInteger)index {
