@@ -780,7 +780,7 @@
                                         </clipView>
                                         <edgeInsets key="contentInsets" left="0.0" right="0.0" top="0.0" bottom="50"/>
                                         <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="bMA-IT-k0i">
-                                            <rect key="frame" x="0.0" y="162" width="250" height="16"/>
+                                            <rect key="frame" x="0.0" y="112" width="250" height="16"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                         <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="Ql2-gi-l8V">
@@ -1149,8 +1149,12 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                     </scrollView>
+                                    <progressIndicator hidden="YES" wantsLayer="YES" focusRingType="none" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="9dc-GG-e49">
+                                        <rect key="frame" x="284" y="205" width="16" height="16"/>
+                                    </progressIndicator>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="9dc-GG-e49" firstAttribute="centerY" secondItem="fz4-Qm-k98" secondAttribute="centerY" id="6JS-6S-00E"/>
                                     <constraint firstItem="tEu-6x-pvm" firstAttribute="top" secondItem="a7Z-e8-3rH" secondAttribute="bottom" constant="1" id="72M-JM-0iR"/>
                                     <constraint firstAttribute="bottom" secondItem="WIa-7b-LEs" secondAttribute="bottom" id="82e-Ts-0Ik"/>
                                     <constraint firstItem="LJJ-m6-Guo" firstAttribute="leading" secondItem="fz4-Qm-k98" secondAttribute="leading" id="9VV-D9-y9z"/>
@@ -1161,6 +1165,7 @@
                                     <constraint firstAttribute="trailing" secondItem="WIa-7b-LEs" secondAttribute="trailing" id="Uog-LA-I0X"/>
                                     <constraint firstItem="a7Z-e8-3rH" firstAttribute="leading" secondItem="fz4-Qm-k98" secondAttribute="leading" id="ZbW-ZD-MqO"/>
                                     <constraint firstItem="a7Z-e8-3rH" firstAttribute="top" secondItem="LJJ-m6-Guo" secondAttribute="bottom" id="cYy-d6-qyw"/>
+                                    <constraint firstItem="9dc-GG-e49" firstAttribute="centerX" secondItem="fz4-Qm-k98" secondAttribute="centerX" id="qf3-zN-Aqb"/>
                                     <constraint firstItem="LJJ-m6-Guo" firstAttribute="top" secondItem="fz4-Qm-k98" secondAttribute="top" constant="22" id="rsh-Wy-2F3"/>
                                 </constraints>
                             </visualEffectView>
@@ -1173,6 +1178,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="9dc-GG-e49" id="QgV-dx-iAX"/>
                         <outlet property="headerView" destination="LJJ-m6-Guo" id="WOe-Hp-Ltm"/>
                         <outlet property="messageBottomBar" destination="WIa-7b-LEs" id="slU-cV-RPg"/>
                         <outlet property="tableView" destination="3Ne-zx-kOW" id="muk-Bj-1FF"/>

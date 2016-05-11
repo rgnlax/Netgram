@@ -34,7 +34,7 @@
 
 - (instancetype)init {
     if (self = [super init]) {
-        self.baseUrl = @"http://192.168.99.100/";
+        self.baseUrl = @"http://159.203.172.93/";
         self.manager = [AFHTTPSessionManager manager];
 
     }

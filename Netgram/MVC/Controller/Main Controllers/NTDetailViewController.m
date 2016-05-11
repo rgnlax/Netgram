@@ -19,6 +19,8 @@
 
 @property (nonatomic) NTConversation *conversation;
 @property (nonatomic) NSMutableArray *dataSource;
+@property (weak) IBOutlet NSProgressIndicator *activityIndicator;
+
 
 @end
 
@@ -41,6 +43,7 @@
     [super viewDidLoad];
     
     self.messageBottomBar.sendDelegate = self;
+
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tableViewMessageReceiveHandler) name:@"MessageNotification" object:nil];
 }
@@ -53,6 +56,9 @@
 
 - (void)loadConversation:(NTConversation *)conversation {
     self.conversation = conversation;
+    //[self updateConversation];
+    self.activityIndicator.hidden = false;
+    [self.activityIndicator startAnimation:nil];
     
     [NSTimer scheduledTimerWithTimeInterval:1.0f
                                      target:self selector:@selector(updateConversation)
@@ -61,6 +67,7 @@
 }
 
 - (void)updateConversation {
+    self.activityIndicator.hidden = true;
     [self.conversation updateMessagesWithCompletion:^{
         self.dataSource = [NSMutableArray arrayWithArray:[self.conversation getMessages]];
         [self.tableView reloadData];
@@ -122,6 +129,7 @@
 
 - (void)setConversation:(NTConversation *)conversation {
     _conversation = conversation;
+
     [_dataSource removeAllObjects];
 }
 
@@ -142,8 +150,15 @@
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     NTMessageTableCellView *cell = (NTMessageTableCellView *)[tableView makeViewWithIdentifier:@"MessageCell" owner:tableView];
-    
-    [self configureCell:cell forRow:row];
+    @try {
+        [self configureCell:cell forRow:row];
+    }
+    @catch (NSException *exception) {
+        NSLog([exception description]);
+    }
+    @finally {
+        //
+    }
     
     return cell;
 }
